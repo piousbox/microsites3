@@ -2,17 +2,15 @@ Microsites2::Application.routes.draw do
 
   root :to => 'welcome#home'
 
-  # then it just disappears...
-  # get "/ru/reports/view/Explanation_Of_Symbolic_Links" => redirect { |params, request| "http://piousbox.com/en/users/show/piousbox" }
+  namespace :api do
+    
+    get 'cities/travel-to/:cityname', :to => 'cities#show'
+    resources :cities
 
-  get 'clear_cache/sites', :to => 'utils/utils#clear_sites_cache', :as => :clear_sites_cache
+    get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
+
+  end
   
-  post 'set_city', :to => 'welcome#set_city', :as => :set_city
-  
-  get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
-
-  get 'v', :to => 'utils/utils#version', :as => :version
-
   scope "/:locale", :constraints => { :locale => /en|ru|pt/ } do
 
     get 'about', :to => 'welcome#about', :as => :about

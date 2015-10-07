@@ -6,8 +6,6 @@ class WelcomeController < ApplicationController
   # caches_page :homepage, :features, :newsitems
   
   def home
-    # puts! site_path( @domain ), "site path is"
-    redirect_to site_path( @domain )
   end
 
   def set_city

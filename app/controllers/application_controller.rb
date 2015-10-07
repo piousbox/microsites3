@@ -16,8 +16,6 @@ class ApplicationController < ActionController::Base
 
   check_authorization
 
-  layout 'application_foundation'
-
   private
   
   def after_sign_in_path_for resource
@@ -69,21 +67,12 @@ class ApplicationController < ActionController::Base
     @site = Site.where( :domain => @domain, :lang => @locale ).first
     @action_name = params[:controller].gsub('/', '_') + '_' + params[:action]
     @action_classes = "#{params[:controller].gsub('/', '_')} #{params[:action]}" # #{@locale}
-    @display_ads = @site.is_ads_enabled
+    @display_ads = false
   end
 
   def load_features args = {}
     @newsitems = []
-
-    if args[:cityname].blank?
-      features = YAML.load_file("#{Rails.root}/config/features.yml")
-    else
-      features = YAML.load_file("#{Rails.root}/config/#{args[:cityname]}_features.yml")
-    end
     @features = []
-    features.each do |f|
-      @features << f.symbolize_keys
-    end
   end
 
   private 

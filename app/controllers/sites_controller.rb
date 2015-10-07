@@ -6,7 +6,8 @@ class SitesController < ApplicationController
 
   def show
     authorize! :show, Site.new
-
+    @site ||= Site.new
+    
     if params[:site_id]
       @site = Site.find params[:site_id]
     end
