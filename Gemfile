@@ -4,6 +4,7 @@ gem 'rails', '4.0.8'
 gem "core_extensions", "~> 0.0.4"
 gem 'activesupport'
 gem 'activeresource'
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'aws-sdk', '< 2.0'
 gem "aws-s3",            :require => "aws/s3"
