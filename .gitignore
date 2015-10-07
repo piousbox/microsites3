@@ -15,13 +15,16 @@ config/initializers/setup_email.rb
 config/initializers/s3.rb
 config/initializers/recaptcha.rb
 config/mongoid.yml
+config/initializers/secret_token.rb
+config/initializers/devise.rb
 
 app/assets
 app/models
 lib
 vendor/assets
+vendor
+data
 
 *trash
 spec/models
 
-vendor

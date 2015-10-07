@@ -1,0 +1,17 @@
+
+development: &id001
+  sessions:
+    default:
+      database: m3api_development
+      hosts:
+        - 127.0.0.1:27017
+
+development_cached: *id001
+production: *id001
+  
+test:
+  sessions:
+    default:
+      database: m3api_test
+      hosts:
+        - 127.0.0.1:27017
