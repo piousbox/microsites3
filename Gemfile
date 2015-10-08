@@ -22,6 +22,7 @@ gem 'mongo_session_store-rails4'
 gem 'paperclip', ['>= 3.4', '!= 4.3.0']
 gem 'kaminari'
 gem 'haml', '~> 3.1.1'
+gem 'sass'
 gem 'nokogiri', '~> 1.5.9'
 gem 'devise'
 gem 'cancan', '~> 1.5'
