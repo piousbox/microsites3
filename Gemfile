@@ -6,6 +6,8 @@ gem 'activesupport'
 gem 'activeresource'
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'recaptcha'
+
 gem 'aws-sdk', '< 2.0'
 gem "aws-s3",            :require => "aws/s3"
 
