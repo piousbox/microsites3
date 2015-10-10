@@ -23,6 +23,7 @@ lib
 vendor/assets
 vendor
 data
+spec/factories
 
 *trash
 spec/models
