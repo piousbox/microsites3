@@ -4,12 +4,14 @@ Microsites2::Application.routes.draw do
 
   namespace :api do
     
-    get 'cities/travel-to/:cityname', :to => 'cities#show'
+    get 'cities/:cityname', :to => 'cities#show', :defaults => { :format => :json }
     resources :cities
 
     get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
 
   end
+
+
   
   scope "/:locale", :constraints => { :locale => /en|ru|pt/ } do
 
@@ -140,11 +142,6 @@ Microsites2::Application.routes.draw do
     get 'videos/in-tag/:tagname' => redirect { |p,r| "/#{p[:locale]}/tags/show/#{p[:tagname]}" }
     # resources :videos
 
-    #
-    # redirects
-    #
-
-    
     # venues
     get 'venues/in-city/:cityname' => redirect { |p,r| "http://travel-guide.mobi/#{p[:locale]}/cities/travel-to/#{p[:cityname]}" }
     get 'venues/show/:venue_name' => redirect { |p, r| "http://travel-guide.mobi/#{p[:locale]}/venues/show/#{p[:venue_name]}" }
@@ -156,37 +153,10 @@ Microsites2::Application.routes.draw do
     match '*other', :to => 'welcome#error500', :as => :error500, :via => [ :get, :post, :put ]
 
   end # scope :locale
-  
-  get 'search', :to => 'welcome#search'
- 
-  scope 'spec_runner', :as => :spec_runner do
-    root :to => 'spec_runner#all'
-    get ':which', :to => 'spec_runner#which', :as => :which
-  end
 
   get 'sitemap_photos', :to => 'utils/sitemaps#photos', :as => :sitemap_photos
 
-  #
-  # old legacy stuff
-  #
-  get 'google4b2e82b4dbbf505d', :to => 'utils/verification#one'
-  get 'index.php/events/calendar/*everything' => redirect { |params, request| '/' }
-  get 'index.php/events/view/*everything' => redirect { |params, request| '/' }
-  get 'index.php/events/in/:cityname' => redirect { |params, request| "/cities/travel-to/#{params[:cityname]}" }
-  get 'index.php' => redirect { |params, request| '/' }
-  match 'venue_types/*everything' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'venue_types' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'dictionaryitems/*everything' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'dictionaryitems' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'helps/*everything' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'helps' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'events/*everything' => redirect { |params, request| '/' }, :via => [ :get ]
-  match 'events' => redirect { |params, request| '/' }, :via => [ :get ]
-
   # this is one hop instead of two (but there is code publication)
   get 'tags' => redirect { |params, request| "/en/sites/#{request.domain}/tags" }
-
-  # add scope
-  match '*other' => redirect { |params, request| "/en/#{params[:other]}" }, :via => [ :get ]
 
 end

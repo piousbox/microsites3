@@ -8,7 +8,7 @@ describe Api::CitiesController do
   end
 
   it 'show' do
-    expect( :get => 'api/cities/travel-to/Chicago.json' ).to route_to( 'api/cities#show', :format => 'json', :cityname => 'Chicago' )
+    expect( :get => 'api/cities/Chicago.json' ).to route_to( 'api/cities#show', :format => 'json', :cityname => 'Chicago' )
   end  
 
   private 

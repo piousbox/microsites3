@@ -14,6 +14,10 @@ class Api::CitiesController < Api::ApiController
   def show    
     @city = City.where( :cityname => params[:cityname] ).first
     authorize! :show, @city
+
+    # somehow this delivers all the reports of the city? # @TODO _vp_ 20151010
+    @city['reports'] = []
+    
     respond_to do |format|
       format.json do
         render :json => @city

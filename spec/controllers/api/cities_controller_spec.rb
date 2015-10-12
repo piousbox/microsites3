@@ -53,7 +53,9 @@ RSpec.describe Api::CitiesController, :type => :controller do
   it 'show' do
     get :show, :cityname => @city.cityname, :format => :json
     response.should be_success
-    assigns( :city ).should_not eql nil
+    city = assigns( :city )
+    city.should_not eql nil
+    city['reports'].should_not eql nil
   end
 
 end
