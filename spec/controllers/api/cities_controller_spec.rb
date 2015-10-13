@@ -40,22 +40,22 @@ RSpec.describe Api::CitiesController, :type => :controller do
     @g = Gallery.create :name => 'a', :galleryname => 'bb', :user => User.all[0]
   end
 
-  it 'index' do
-    get :index, :format => :json
-    response.should be_success
-    assigns( :cities ).should_not eql nil
-  end
+  describe 'api/cities ctrl functional spec' do
+    
+    it 'index' do
+      get :index, :format => :json
+      response.should be_success
+      assigns( :cities ).should_not eql nil
+    end
 
-  it 'create' do
-    ;
-  end
+    it 'show' do
+      get :show, :cityname => @city.cityname, :format => :json
+      response.should be_success
+      city = assigns( :city )
+      city.should_not eql nil
+      city['reports'].should_not eql nil
+    end
 
-  it 'show' do
-    get :show, :cityname => @city.cityname, :format => :json
-    response.should be_success
-    city = assigns( :city )
-    city.should_not eql nil
-    city['reports'].should_not eql nil
   end
 
 end
