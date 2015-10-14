@@ -21,7 +21,6 @@ app/assets
 app/models
 lib
 vendor/assets
-vendor
 data
 spec/factories
 

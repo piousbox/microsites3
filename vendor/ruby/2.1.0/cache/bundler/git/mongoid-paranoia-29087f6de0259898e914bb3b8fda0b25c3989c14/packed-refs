@@ -1,0 +1,15 @@
+# pack-refs with: peeled fully-peeled 
+8bbe1820d83796f7da9c5d9acb14b96fb4358bf1 refs/heads/3.0.0-stable
+73f90fbb139698201d74813de6400a3edd7b39f7 refs/heads/AS-deprecation
+6ea066fab8baf02bd4760afe7e14b260879e5fff refs/heads/delete-cascading
+b77d44f62c950333ee70b16996d4bf0258fce5bb refs/heads/eager_load
+83dc8de7b42600eb73517894d6f53aa6498890a9 refs/heads/master
+4c8c2b85f1fa8a57eaa2e8e8d658c648d67c5c95 refs/heads/new_rspec_syntax
+15b7f71348b6ba199f563327357b40b0cd160e35 refs/heads/persistence
+4d1571872d4553ec0d0c67618868f1603be00992 refs/heads/uniqueness_fix
+c4be929512acea7a312c90b51ff42d8f4598e28b refs/tags/v0.1.2
+^27cb64f04e16b9c4b3b1935196bf16595df77f5c
+fb3c6941ef1df79e66fe2f60d83aa1fc99c3c6fd refs/tags/v0.2.0
+^b7631cee2a1c120ba277174500753e8b8ff586c2
+f199fcec77c07a80cd3248e243f211c5db35068e refs/tags/v0.2.1
+^83dc8de7b42600eb73517894d6f53aa6498890a9
