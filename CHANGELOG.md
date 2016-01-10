@@ -6,4 +6,4 @@
 * all specs pass
 
 ## 0.0.1:
-* a future version
+* working on authentication
