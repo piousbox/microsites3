@@ -27,3 +27,4 @@ spec/factories
 *trash
 spec/models
 
+vendor/bundle

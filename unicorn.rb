@@ -7,7 +7,7 @@ listen 3004, :tcp_nopush => true
 
 timeout 300
 
-pid "/home/piousbox/projects/sleeper/tmp/pids/unicorn.pid"
+pid "/home/piousbox/projects/microsites3_api/tmp/pids/unicorn.pid"
 
 stderr_path "/home/piousbox/projects/microsites3_api/log/microsites3_api.unicorn.stderr.log"
 stdout_path "/home/piousbox/projects/microsites3_api/log/microsites3_api.unicorn.stdout.log"

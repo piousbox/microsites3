@@ -54,6 +54,8 @@ module Microsites2
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
+    config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
     
   end
 end
