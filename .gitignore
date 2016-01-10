@@ -1,29 +1,31 @@
-tmp
-log
+/tmp
+/log
 *.DS_Store
 
 *~
 \#*
 .#*
 
-coverage
-public/en
-public/ru
-public/pt
-.sass-cache
-config/initializers/setup_email.rb
-config/initializers/s3.rb
-config/initializers/recaptcha.rb
-config/mongoid.yml
-config/initializers/secret_token.rb
+/coverage
+/public/en
+/public/ru
+/public/pt
+/.sass-cache
+/config/initializers/setup_email.rb
+/config/initializers/s3.rb
+/config/initializers/recaptcha.rb
+/config/mongoid.yml
+/config/initializers/secret_token.rb
 
-app/assets
-app/models
-lib
-vendor/assets
-data
-spec/factories
+/app/assets
+/app/models
+/lib
+/vendor/assets
+/data
+/spec/factories
 
 *trash
-spec/models
+/spec/models
 
+/vendor/ruby
+/vendor/bundle
