@@ -12,6 +12,7 @@ describe WelcomeController, :type => :controller do
     
     it 'ok' do
       get :home
+      puts! response.body, 'response body'
       response.should be_success
     end
     

@@ -1,9 +1,16 @@
+
+#
+# microsites3_api routes
+# 20160110
+#
+
 Microsites2::Application.routes.draw do
 
   root :to => 'welcome#home'
-
+  
+  post 'auth' => 'auth#authenticate'
+  
   namespace :api do
-    
     get 'cities/:cityname', :to => 'cities#show', :defaults => { :format => :json }
     resources :cities
 
@@ -11,23 +18,16 @@ Microsites2::Application.routes.draw do
     get 'reports/:name_seo', :to => 'reports#show'
 
     get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
-
   end
 
-
+  
   
   scope "/:locale", :constraints => { :locale => /en|ru|pt/ } do
-
-    get 'about', :to => 'welcome#about', :as => :about
-    get 'privacy', :to => 'welcome#privacy', :as => :privacy
-    get 'contact', :to => 'welcome#contact', :as => :contact
-    get 'sitemap', :to => 'utils/sitemaps#sitemap', :as => :sitemap
     
     devise_for :users, :controllers => {
       :sessions => "users/sessions",
       :registrations => 'users/registrations'
     }
-
     
     # cities
     get 'cities/travel-to/:cityname' => redirect { |params, request| "http://travel-guide.mobi/en/cities/travel-to/#{params[:cityname]}" }

@@ -35,6 +35,7 @@ gem 'actionpack-action_caching'
 
 gem 'unicorn'
 gem 'passenger'
+gem 'jwt'
 
 group :test do
   gem 'rspec-rails'
