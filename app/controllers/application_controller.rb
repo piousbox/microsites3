@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_defaults
 
-  # before_action :set_current_user, :authenticate_request
+  before_action :set_current_user, :authenticate_request
   
   rescue_from NotAuthenticatedError do
     render json: { error: 'Not Authorized' }, status: :unauthorized
