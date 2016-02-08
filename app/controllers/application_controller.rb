@@ -12,11 +12,13 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_defaults
 
-  before_action :set_current_user, :authenticate_request
+  before_action :set_current_user
+  before_action :authenticate_request
   
   rescue_from NotAuthenticatedError do
     render json: { error: 'Not Authorized' }, status: :unauthorized
   end
+  
   rescue_from AuthenticationTimeoutError do
     render json: { error: 'Auth token is expired' }, status: 419 # unofficial timeout status code
   end
@@ -36,7 +38,7 @@ class ApplicationController < ActionController::Base
   # Based on the user_id inside the token payload, find the user.
   def set_current_user
     if decoded_auth_token
-      @current_user ||= User.find(decoded_auth_token[:user_id])
+      @current_user ||= User.find(decoded_auth_token[:user_id]['$oid'])
     end
   end
   
@@ -50,7 +52,8 @@ class ApplicationController < ActionController::Base
   end
   
   def decoded_auth_token
-    @decoded_auth_token ||= AuthToken.decode(http_auth_header_content)
+    @decoded_auth_token ||= AuthToken.decode(http_auth_header_content)    
+    return @decoded_auth_token
   end
   
   def auth_token_expired?
@@ -71,7 +74,7 @@ class ApplicationController < ActionController::Base
   end
 
 
-
+  
   
   def after_sign_in_path_for resource
     organizer_path
@@ -129,8 +132,6 @@ class ApplicationController < ActionController::Base
     @newsitems = []
     @features = []
   end
-
-  private 
 
   def puts! arg, label=""
     unless Rails.env.production?
