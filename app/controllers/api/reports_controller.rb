@@ -1,6 +1,8 @@
 
 class Api::ReportsController < Api::ApiController
 
+  before_action :authenticate_request, :except => [ :show, :index ]
+  
   def index
     @reports = Report.page( params[:reports_page] ).per( Report::PER_PAGE )
     authorize! :index, Report.new
@@ -13,6 +15,11 @@ class Api::ReportsController < Api::ApiController
 
   def show
     @report = Report.where( :name_seo => params[:name_seo] ).first
+    
+    unless @report.is_public
+      authenticate_request
+    end
+    
     authorize! :show, @report
     
     respond_to do |format|

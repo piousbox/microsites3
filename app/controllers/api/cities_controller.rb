@@ -1,6 +1,8 @@
 
 class Api::CitiesController < Api::ApiController
 
+  before_action :authenticate_request, :except => [ :index, :show ]
+  
   def index
     @cities = City.all
     authorize! :index, City.new

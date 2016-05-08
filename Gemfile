@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.8'
+gem 'rails', '~> 4.2'
 gem "core_extensions", "~> 0.0.4"
 gem 'activesupport'
 gem 'activeresource'
@@ -21,12 +21,12 @@ gem 'mongo_session_store-rails4'
 
 gem 'paperclip', ['>= 3.4', '!= 4.3.0']
 gem 'kaminari'
-gem 'haml', '~> 3.1.1'
+gem 'haml'
+gem 'haml-rails'
 gem 'sass'
-gem 'nokogiri', '~> 1.5.9'
+gem 'nokogiri'
 gem 'devise'
 gem 'cancan', '~> 1.5'
-gem 'kgio', '~> 2.8.0'
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'tzinfo'
 gem 'eventmachine'
@@ -36,6 +36,9 @@ gem 'actionpack-action_caching'
 gem 'unicorn'
 gem 'passenger'
 gem 'jwt'
+
+gem 'ish_lib_assets'
+gem 'ish_lib_engine'
 
 group :test do
   gem 'rspec-rails'
@@ -61,5 +64,5 @@ group :test, :development, :development_production, :util do
   gem 'simple-rss', :git => "git://github.com/piousbox/simple-rss.git"
   gem 'htmlentities' # need with simple-rss
   gem 'resque'
-  gem 'minitest', '~> 4.7.5'
+  gem 'minitest'
 end

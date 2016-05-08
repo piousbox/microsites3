@@ -1,6 +1,9 @@
 require 'string'
 require 'float'
 
+class AccessDeniedError < StandardError
+end
+
 class NotAuthenticatedError < StandardError
 end
 
@@ -153,4 +156,5 @@ end
 #    return options
 #  end
 #end
+
 

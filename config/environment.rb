@@ -12,4 +12,4 @@ Encoding.default_internal = Encoding::UTF_8
 # encoding: utf-8
 # coding: utf-8
 
-YAML::ENGINE.yamler = 'syck'
+# YAML::ENGINE.yamler = 'syck'

@@ -4,6 +4,8 @@ class WelcomeController < ApplicationController
   before_filter :load_features
 
   # caches_page :homepage, :features, :newsitems
+
+  before_action :authenticate_request, :except => [ :home ]
   
   def home
   end
