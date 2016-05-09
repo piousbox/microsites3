@@ -229,7 +229,7 @@ class UsersController < ApplicationController
     flash[:notice] = 'Success I think.'
     redirect_to organizer_path
   end
-
+  
   #
   # private
   #

@@ -17,6 +17,9 @@ Microsites2::Application.routes.draw do
     get 'reports', :to => 'reports#index'
     get 'reports/:name_seo', :to => 'reports#show'
 
+    get 'scratchpad', :to => 'users#scratchpad', :defaults => { :format => :json }
+    post 'scratchpad', :to => 'users#update_scratchpad'
+    
     get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
   end
 
