@@ -11,6 +11,8 @@ Microsites2::Application.routes.draw do
   post 'auth' => 'auth#authenticate'
   post 'api/auth' => 'auth#authenticate'
   
+  post 'paypal/ipn', :to => 'paypal#ipn'
+  
   namespace :api do
 
     get 'cities/:cityname', :to => 'cities#show', :defaults => { :format => :json }
@@ -23,6 +25,7 @@ Microsites2::Application.routes.draw do
     post 'scratchpad', :to => 'users#update_scratchpad'
     
     get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
+
   end
 
   

@@ -14,9 +14,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   before_filter :set_defaults
-
   before_action :set_current_user
-  before_action :authenticate_request
   
   rescue_from NotAuthenticatedError do
     render json: { error: 'Not Authorized' }, status: :unauthorized

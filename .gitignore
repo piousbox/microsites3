@@ -24,8 +24,8 @@
 /data
 /spec/factories
 
-*trash
+*.trash
 /spec/models
 
-/vendor/bundle
 /.bundle
+/vendor
