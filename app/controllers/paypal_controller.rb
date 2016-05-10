@@ -7,8 +7,11 @@ class PaypalController < ApplicationController
     @ipn = Paypal::Ipn.new
     authorize! :ipn, @ipn
     @ipn.raw_parameters = params.to_s
-    @ipn.save
-    render :json => { :status => :ok }
+    if @ipn.save
+      render :json => { :status => :ok }
+    else
+      render :json => { :status => 'No luck.' }
+    end
   end
 
 end
