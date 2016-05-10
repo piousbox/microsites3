@@ -9,8 +9,10 @@ Microsites2::Application.routes.draw do
   root :to => 'welcome#home'
   
   post 'auth' => 'auth#authenticate'
+  post 'api/auth' => 'auth#authenticate'
   
   namespace :api do
+
     get 'cities/:cityname', :to => 'cities#show', :defaults => { :format => :json }
     resources :cities
 
