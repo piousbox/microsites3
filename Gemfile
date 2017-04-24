@@ -26,7 +26,7 @@ gem 'sass'
 gem 'nokogiri', '~> 1.5.9'
 gem 'devise'
 gem 'cancan', '~> 1.5'
-gem 'kgio', '~> 2.8.0'
+# gem 'kgio', '~> 2.8.0' # obsolete? _vp_ 20170424
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 gem 'tzinfo'
 gem 'eventmachine'

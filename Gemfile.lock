@@ -282,7 +282,6 @@ DEPENDENCIES
   hpricot
   htmlentities
   kaminari
-  kgio (~> 2.8.0)
   minitest (~> 4.7.5)
   mongo_session_store-rails4
   mongoid (= 4.0.2)
@@ -313,4 +312,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.10.6
+   1.14.6
