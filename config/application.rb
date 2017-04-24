@@ -16,6 +16,8 @@ end
 
 module Microsites2
   class Application < Rails::Application
+
+    config.secret_key_base = 'abba'
     
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W( #{Rails.root}/app/sweepers )

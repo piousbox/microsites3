@@ -3,9 +3,8 @@ class WelcomeController < ApplicationController
   skip_authorization_check
   before_filter :load_features
 
-  # caches_page :homepage, :features, :newsitems
-  
   def home
+    render :json => { :status => :ok }
   end
 
   def set_city
