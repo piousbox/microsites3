@@ -8,7 +8,7 @@ describe 'route to api/reports' do
   end
 
   it 'show' do
-    expect( :get => 'api/reports/some_report.json' ).to route_to( 'api/reports#show', :format => 'json', :name_seo => 'some_report' )
+    expect( :get => 'api/reports/view/some_report.json' ).to route_to( 'api/reports#show', :format => 'json', :name_seo => 'some_report' )
   end  
 
 end

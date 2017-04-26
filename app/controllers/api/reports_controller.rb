@@ -12,12 +12,12 @@ class Api::ReportsController < Api::ApiController
   end
 
   def show
-    @report = Report.where( :name_seo => params[:name_seo] ).first
+    @report = Report.find_by :name_seo => params[:name_seo] 
     authorize! :show, @report
     
     respond_to do |format|
       format.json do
-        render :json => @report
+        render 
       end
     end
   end

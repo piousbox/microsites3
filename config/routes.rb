@@ -7,8 +7,8 @@ Microsites2::Application.routes.draw do
     get 'cities/:cityname', :to => 'cities#show', :defaults => { :format => :json }
     resources :cities
 
-    get 'reports', :to => 'reports#index'
-    get 'reports/:name_seo', :to => 'reports#show'
+    get 'reports',                :to => 'reports#index'
+    get 'reports/view/:name_seo', :to => 'reports#show'
 
     get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
 
