@@ -10,12 +10,13 @@ Microsites2::Application.routes.draw do
     get 'reports',                :to => 'reports#index'
     get 'reports/view/:name_seo', :to => 'reports#show'
 
-    get 'sites/by-id/:site_id', :to => 'sites#show', :defaults => { :format => :json }
-
+    get 'sites/by-id/:site_id',    :to => 'sites#show', :defaults => { :format => :json }
+    get 'sites/:domain',           :to => 'sites#show' 
+    get 'sites/:domain/newsitems', :to => 'newsitems#index'
   end
 
 
-  
+
   scope "/:locale", :constraints => { :locale => /en|ru|pt/ } do
 
     get 'about', :to => 'welcome#about', :as => :about

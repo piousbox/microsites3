@@ -1,0 +1,3 @@
+
+0.0.4 - specs pass
+0.0.5 - let's get rid of ish_lib dependency, since this is going to be an engine.

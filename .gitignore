@@ -17,14 +17,10 @@
 /config/mongoid.yml
 /config/initializers/secret_token.rb
 
-/app/assets
-/app/models
-/lib
-/vendor/assets
+/vendor
 /data
-/spec/factories
 
-*trash
+*.trash
 /spec/models
 
 /vendor/ruby
