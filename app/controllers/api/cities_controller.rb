@@ -24,9 +24,12 @@ class Api::CitiesController < Api::ApiController
     @city['reports'] = []
     @city['reports_map'] = Report.where( :city_id => @city.id, :x.exists => true, :y.exists => true )
     
+    @newsitems = @city.newsitems.limit( 10 )
+
     respond_to do |format|
       format.json do
-        render :json => @city
+        render
+        # render :json => @city
       end
     end
   end

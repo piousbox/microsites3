@@ -11,8 +11,7 @@ Microsites2::Application.routes.draw do
     get 'reports/view/:name_seo', :to => 'reports#show'
 
     get 'sites/by-id/:site_id',    :to => 'sites#show', :defaults => { :format => :json }
-    get 'sites/:domain',           :to => 'sites#show' 
-    get 'sites/:domain/newsitems', :to => 'newsitems#index'
+    get 'sites/show/:domain',      :to => 'sites#show', :constraints => { :domain => /[^\/]+/ }
   end
 
 
