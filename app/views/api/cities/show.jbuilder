@@ -8,7 +8,8 @@ json.cache! [ @city, params ] do
   json.calendar_frame @city.calendar_frame
   json.cityname       @city.cityname
   json.name           @city.name
-  json.features       @city.features
+  json.partial! 'api/features/index', :features => @features
+  # json.features       @features
   json.newsitems      @newsitems
 
   json.reports   @city.reports

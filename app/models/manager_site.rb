@@ -1,4 +1,0 @@
-
-class ManagerSite
-
-end
