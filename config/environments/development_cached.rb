@@ -1,10 +1,10 @@
 
 # development_cached
 Microsites2::Application.configure do
-  config.cache_classes = false
-  config.whiny_nils = true
 
-  config.consider_all_requests_local       = false
+  config.cache_classes = true
+
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
   config.assets.compile = true
   config.cache_store = :file_store, Rails.root.join( 'tmp', 'cache', 'pages' )

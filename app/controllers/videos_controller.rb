@@ -1,8 +1,5 @@
 
 class VideosController < ApplicationController
-  
-  caches_page :index, self::CACHE_OPTIONS
-  caches_page :show, self::CACHE_OPTIONS
 
   def index
     authorize! :index, Video.new

@@ -1,8 +1,5 @@
 class GalleriesController < ApplicationController
 
-  caches_page :index, self::CACHE_OPTIONS
-  # caches_page :show, self::CACHE_OPTIONS
-
   rescue_from Mongoid::Errors::DocumentNotFound do
     flash[:error] = 'Gallery not found.'
     redirect_to galleries_path

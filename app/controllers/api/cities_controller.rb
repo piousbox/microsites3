@@ -27,12 +27,6 @@ class Api::CitiesController < Api::ApiController
     @features = @city.features.limit( @city.n_features )
     @newsitems = @city.newsitems.limit( 10 )
 
-    respond_to do |format|
-      format.json do
-        render
-        # render :json => @city
-      end
-    end
   end
 
 end

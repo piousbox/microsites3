@@ -3,10 +3,6 @@ class ReportsController < ApplicationController
 
   before_filter :load_features, :only => [ :show ]
 
-  caches_page :index, self::CACHE_OPTIONS
-  caches_page :not_found, self::CACHE_OPTIONS
-  # caches_page :show, self::CACHE_OPTIONS
-
   def new
     @report = Report.new
     authorize! :new, @report

@@ -1,16 +1,6 @@
 
 class UsersController < ApplicationController
 
-  caches_page :resume, CACHE_OPTIONS
-  caches_page :show, CACHE_OPTIONS
-  caches_page :index, CACHE_OPTIONS
-  caches_page :reports, CACHE_OPTIONS
-  caches_page :report, CACHE_OPTIONS
-  caches_page :galleries, CACHE_OPTIONS
-  caches_page :gallery, CACHE_OPTIONS
-  caches_page :github_page, CACHE_OPTIONS
-  caches_page :about, CACHE_OPTIONS
-
   layout 'resume'
 
   before_filter :set_tags_global, :only => [ :gallery, :galleries, :show, :reports, :report, :index, :github_page, :about ]

@@ -1,4 +1,8 @@
 
+#
+# api / reports / show
+#
+
 json.cache! [ @report, params ] do
   json.id         @report.id.to_s
   json.name       @report.name
