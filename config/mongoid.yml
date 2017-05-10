@@ -14,3 +14,10 @@ test:
       database: ish_test
       hosts:
         - 127.0.0.1
+
+production:
+  clients:
+    default:
+      database: ish_production
+      hosts:
+        - 10.0.1.12
