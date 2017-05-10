@@ -18,7 +18,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid', '~> 6.1.0'
+
 gem 'ish_models', :path => '/home/piousbox/projects/ruby/ish_models'
+gem 'ishapi',     :path => 'ishapi'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -34,4 +36,3 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-gem 'ishapi', path: 'ishapi'

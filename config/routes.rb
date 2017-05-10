@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-  root :to => 'api/api#home'
+  # root :to => 'api/api#home'
 
+  mount Ishapi::Engine, :at => 'api'
+
+=begin
   namespace :api do
     root :to => 'api#home'
 
@@ -14,6 +17,7 @@ Rails.application.routes.draw do
     get 'sites/by-id/:site_id',    :to => 'sites#show', :defaults => { :format => :json }
     get 'sites/show/:domain',      :to => 'sites#show', :constraints => { :domain => /[^\/]+/ }
   end
+=end
 
 end
 

@@ -1,10 +1,12 @@
 
-development:
+development: &id1
   clients:
     default:
       database: ish_development
       hosts:
         - 127.0.0.1
+development_cached: *id1
+development_production: *id1
 
 test:
   clients:
