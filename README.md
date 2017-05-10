@@ -1,24 +1,12 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API backend for microsites3!
 
-Things you may want to cover:
+Models are in ish_lib! Nobody has time to copy-paste things. @TODO: ish-models should be a gem.
 
-* Ruby version
+Take a look at other branches, master is not the interesting and most modern branch.
 
-* System dependencies
+Looks like I'm stuck with ruby 1.9.3 here for now...
 
-* Configuration
+ node 10.0.1.148:8089
+ RAILS_ENV=development_production be rails s --port 3004
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
