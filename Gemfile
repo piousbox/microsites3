@@ -20,6 +20,7 @@ gem 'mongoid', '~> 6.1.0'
 
 gem 'ish_models' # , :path => '/home/piousbox/projects/ruby/ish_models'
 gem 'ishapi' # ,     :path => 'ishapi'
+gem 'unicorn'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
