@@ -19,8 +19,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
-gem 'ish_models'
-gem 'ishapi'
+gem 'ish_models', :github => 'piousbox/ish_models', :branch => :master
+gem 'ishapi', :github => 'piousbox/ishapi', :branch => :master
 gem 'unicorn'
 
 gem 'paperclip'
