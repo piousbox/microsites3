@@ -34,3 +34,4 @@
 
 /ishapi
 /shared
+/config/initializers/s3.rb
