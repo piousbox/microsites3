@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -ex
+
+cd /home/ubuntu/projects/microsites3_api
+git pull
+bundle
+sudo service microsites3_api-app restart
+sleep 3
+service microsites3_api-app status
