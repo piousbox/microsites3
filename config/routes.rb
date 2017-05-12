@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # root :to => 'api/api#home'
 
-  mount Ishapi::Engine, :at => 'api'
+  mount Ishapi::Engine, :at => '/api/'
 
 =begin
   namespace :api do

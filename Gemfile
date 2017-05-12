@@ -17,16 +17,22 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'mongoid', '~> 6.1.0'
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
 gem 'ish_models' # , :path => '/home/piousbox/projects/ruby/ish_models'
 gem 'ishapi' # ,     :path => 'ishapi'
 gem 'unicorn'
+
+gem 'paperclip'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
   gem 'rspec'
+  gem 'rspec-rails'
+  gem 'simplecov'
+  gem 'test-unit'
 end
 
 group :development do
