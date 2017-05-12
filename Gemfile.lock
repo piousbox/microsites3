@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 24e5fe40ad63a24836a1235423a17f3f0a78058a
+  revision: 1642d89c714b4f921a8798654cf2372f6c586140
   branch: master
   specs:
     ish_models (0.0.5)
@@ -125,6 +125,7 @@ GEM
     public_suffix (2.0.5)
     puma (3.8.2)
     rack (2.0.2)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.0)
@@ -249,6 +250,7 @@ DEPENDENCIES
   mongoid-paperclip
   paperclip
   puma (~> 3.7)
+  rack-cors
   rails (~> 5.1.0)
   rspec
   rspec-rails

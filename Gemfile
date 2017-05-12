@@ -24,6 +24,7 @@ gem 'ishapi', :github => 'piousbox/ishapi', :branch => :master
 gem 'unicorn'
 
 gem 'paperclip'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
