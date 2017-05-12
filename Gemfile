@@ -32,7 +32,6 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'simplecov'
-  gem 'test-unit'
 end
 
 group :development do

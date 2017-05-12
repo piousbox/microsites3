@@ -9,7 +9,7 @@ require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/rspec'
 
-require 'test/unit'
+# require 'test/unit'
 
 # require 'devise'
 # include Warden::Test::Helpers
