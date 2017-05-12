@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -ex
+
+cd /home/ubuntu/projects/microsites3_api
+git reset origin/master --force
+git pull
+/home/ubuntu/.rbenv/versions/2.3.1/bin/bundle
+sudo service microsites3_api-app restart
+sleep 3
+service microsites3_api-app status
