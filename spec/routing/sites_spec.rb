@@ -1,8 +1,10 @@
 require 'spec_helper'
 describe 'routes of api sites' do
+  routes { Ishapi::Engine.routes }
 
-  it 'newsitems' do
-    expect( :get => 'api/sites/local.com.json' ).to route_to( 'api/newsitems#index', :domain => 'local.com', :format => 'json' )
+  it 'show a site' do
+    expect( :get => '/sites/view/local.com.json' ).to route_to( 'ishapi/sites#show', :domain => 'local.com.json' )
+    expect( :get => '/sites/view/local.com' ).to route_to( 'ishapi/sites#show', :domain => 'local.com' )
   end
 
 end

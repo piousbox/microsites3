@@ -19,8 +19,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
-gem 'ish_models' # , :path => '/home/piousbox/projects/ruby/ish_models'
-gem 'ishapi' # ,     :path => 'ishapi'
+gem 'ish_models', :path => '/home/piousbox/projects/ruby/ish_models'
+gem 'ishapi',     :path => 'ishapi'
 gem 'unicorn'
 
 gem 'paperclip'
