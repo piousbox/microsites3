@@ -4,6 +4,8 @@
 # Intro
 
 # Develop
+ port: 3004
+ env:  development_production
 
 # Test
 
