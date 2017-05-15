@@ -10,19 +10,16 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
-
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-# gem 'redis', '~> 3.0'
-# gem 'bcrypt', '~> 3.1.7'
-
+# gem 'aws-sdk-v1' ## incompatible with json?
+gem 'aws-sdk', '~> 2'
+# gem "aws-s3", '~> 0.6.3' # , :require => "aws/s3" # obsolete, should not use?
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
-
 gem 'ish_models', :github => 'piousbox/ish_models', :branch => :master
 gem 'ishapi', :github => 'piousbox/ishapi', :branch => :master
 gem 'unicorn'
-
 gem 'paperclip'
 gem 'rack-cors'
 
