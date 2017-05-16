@@ -27,3 +27,4 @@
 /ishapi
 /shared
 /config/initializers/00_s3.rb
+/data
