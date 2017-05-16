@@ -10,19 +10,14 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
-
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-# gem 'redis', '~> 3.0'
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'aws-sdk', '~> 2'
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
-
-gem 'ish_models', :github => 'piousbox/ish_models', :branch => :master
+gem 'ish_models', :github => 'piousbox/ish_models', :branch => '0.0.8'
 gem 'ishapi', :github => 'piousbox/ishapi', :branch => :master
 gem 'unicorn'
-
 gem 'paperclip'
 gem 'rack-cors'
 

@@ -21,6 +21,23 @@ Rails.application.routes.draw do
 
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 =begin
   scope "/:locale", :constraints => { :locale => /en|ru|pt/ } do
 
