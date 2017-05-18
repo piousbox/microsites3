@@ -3,15 +3,15 @@ GIT
   revision: fdbf4b479b421ccb527add0e1dbfcdc557398eb4
   branch: 0.0.8
   specs:
-    ish_models (0.0.29.9)
+    ish_models (0.0.29.10)
       mongoid (~> 6.1.0, >= 6.1.0)
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 1dff35a654aad966261d67d03c7ea2f58e31b6d3
+  revision: 69d40226d4917495909d52b0a09d1b128696c437
   branch: master
   specs:
-    ishapi (0.1.4)
+    ishapi (0.1.5)
       mongoid (~> 6.1.0)
       rails (~> 5.1.0)
 
