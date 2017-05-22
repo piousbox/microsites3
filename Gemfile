@@ -21,6 +21,7 @@ gem 'rack-cors'
 
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
 # gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master
+gem 'ish_manager', path: 'ish_manager'
 gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 
 group :development, :test do

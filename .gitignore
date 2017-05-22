@@ -25,10 +25,11 @@
 /log
 
 /ishapi
+/ish_manager
+
 /shared
-<<<<<<< HEAD
+
 /config/initializers/s3.rb
-=======
 /config/initializers/00_s3.rb
+
 /data
->>>>>>> 0.1.0
