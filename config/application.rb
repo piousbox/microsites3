@@ -6,6 +6,7 @@ require "sprockets/railtie"
 require "rails/test_unit/railtie"
 require "action_cable"
 
+# ish_models/railtie
 require_relative "initializers/00_s3.rb"
 
 # Require the gems listed in Gemfile, including any gems
