@@ -15,11 +15,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'aws-sdk', '~> 2'
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
-gem 'ish_models', :github => 'piousbox/ish_models', :branch => '0.0.8'
-gem 'ishapi', :github => 'piousbox/ishapi', :branch => :master
 gem 'unicorn'
 gem 'paperclip'
 gem 'rack-cors'
+
+gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
+# gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master
+gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
