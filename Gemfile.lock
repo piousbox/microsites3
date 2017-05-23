@@ -20,9 +20,11 @@ PATH
   remote: ish_manager
   specs:
     ish_manager (0.1.0)
-      activeadmin (~> 1.0.0)
-      haml (>= 5.0.1)
-      rails (~> 5.1.1)
+      activeadmin (~> 1.0)
+      cancancan (~> 2.0)
+      devise (~> 4.3)
+      haml (~> 5.0)
+      rails (~> 5.1)
 
 GEM
   remote: https://rubygems.org/
@@ -99,6 +101,7 @@ GEM
     bson (4.2.1)
     builder (3.2.3)
     byebug (9.0.6)
+    cancancan (2.0.0)
     capybara (2.13.0)
       addressable
       mime-types (>= 1.16)
@@ -341,6 +344,7 @@ DEPENDENCIES
   aws-sdk (~> 2)
   byebug
   capybara (~> 2.13.0)
+  devise (~> 4.3)
   ish_manager!
   ish_models!
   ishapi!

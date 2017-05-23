@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root :to => 'application#home'
   mount Ishapi::Engine, :at => '/api/'
   mount IshManager::Engine, :at => '/manager/'
 end
