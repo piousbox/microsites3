@@ -2,11 +2,12 @@ require_relative 'boot'
 
 require "action_controller/railtie"
 require "action_mailer/railtie"
+require "active_resource/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
-require "action_cable"
+# require "action_cable" # wtf is this?
 
-# ish_models/railtie
+# ish_models/railtie # doesn't work right now
 require_relative "initializers/00_s3.rb"
 
 # Require the gems listed in Gemfile, including any gems
