@@ -5,3 +5,4 @@
         models are again in ish_lib
 0.1.0 - major versions upgrade, lets figure out json.cache
         lets add prod config and deploy
+0.1.2 - devise is in, gems are ish_models, ishapi, ish_manager
