@@ -31,5 +31,6 @@
 
 /config/initializers/s3.rb
 /config/initializers/00_s3.rb
+/config/mongoid.yml
 
 /data
