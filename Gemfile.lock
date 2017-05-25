@@ -1,4 +1,18 @@
 GIT
+  remote: https://github.com/piousbox/ish_manager.git
+  revision: dff1e1dfa25b6806506ac8ca320698f9efc8a2e8
+  branch: master
+  specs:
+    ish_manager (0.1.0)
+      activeadmin (~> 1.0)
+      cancancan (~> 2.0)
+      devise (~> 4.3)
+      haml (~> 5.0)
+      kaminari-actionview (~> 1.0)
+      kaminari-mongoid (~> 1.0)
+      rails (~> 5.1)
+
+GIT
   remote: https://github.com/piousbox/ish_models.git
   revision: f644ce9e7d5cc7b9e555cd2e6eb9d0d9f6235254
   branch: master
@@ -15,18 +29,6 @@ GIT
     ishapi (0.1.6)
       mongoid (~> 6.1.0)
       rails (~> 5.1.0)
-
-PATH
-  remote: ish_manager
-  specs:
-    ish_manager (0.1.0)
-      activeadmin (~> 1.0)
-      cancancan (~> 2.0)
-      devise (~> 4.3)
-      haml (~> 5.0)
-      kaminari-actionview (~> 1.0)
-      kaminari-mongoid (~> 1.0)
-      rails (~> 5.1)
 
 GEM
   remote: https://rubygems.org/

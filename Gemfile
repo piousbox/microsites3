@@ -21,8 +21,7 @@ gem 'paperclip'
 gem 'rack-cors'
 
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
-# gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master
-gem 'ish_manager', :path => 'ish_manager'
+gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master
 gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 
 gem "devise", "~> 4.3" 
