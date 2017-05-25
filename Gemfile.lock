@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 459c3405367a7e374d2584c99830178171533555
+  revision: f644ce9e7d5cc7b9e555cd2e6eb9d0d9f6235254
   branch: master
   specs:
     ish_models (0.0.32.1)
@@ -24,6 +24,8 @@ PATH
       cancancan (~> 2.0)
       devise (~> 4.3)
       haml (~> 5.0)
+      kaminari-actionview (~> 1.0)
+      kaminari-mongoid (~> 1.0)
       rails (~> 5.1)
 
 GEM
@@ -114,9 +116,9 @@ GEM
     climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
-    coffee-rails (4.2.1)
+    coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.2.x)
+      railties (>= 4.0.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -173,6 +175,9 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    kaminari-mongoid (1.0.1)
+      kaminari-core (~> 1.0)
+      mongoid
     kgio (2.11.0)
     libv8 (3.16.14.19)
     listen (3.1.5)
@@ -349,6 +354,7 @@ DEPENDENCIES
   ish_models!
   ishapi!
   jbuilder (~> 2.5)
+  kaminari-mongoid
   listen (>= 3.0.5, < 3.2)
   mongoid (~> 6.1.0)
   mongoid-paperclip
