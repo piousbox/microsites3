@@ -1,0 +1,3 @@
+
+before_install:
+  - touch config/initializers/00_s3.rb
