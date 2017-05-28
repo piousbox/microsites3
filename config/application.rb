@@ -8,8 +8,6 @@ require "rails/test_unit/railtie"
 # ish_models/railtie # doesn't work right now
 require_relative "initializers/00_s3.rb"
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Microsites3Api
