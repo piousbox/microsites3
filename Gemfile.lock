@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 9bbb45593db8077ad4570fb0cc06fa30d009c846
+  revision: 36fa5a200e84653d21c67816f80cb90d6fd04a72
   branch: master
   specs:
-    ish_manager (0.1.8.5)
+    ish_manager (0.1.8.6)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -14,10 +14,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 363f02a5c83c4f236a21c9633855af66e44ea8e6
+  revision: fce5a7df7da8223593891eec2f611b4a9d89e155
   branch: master
   specs:
-    ish_models (0.0.33.10)
+    ish_models (0.0.33.11)
       devise (> 0)
       mongoid (~> 6.1.0, >= 6.1.0)
 
@@ -304,11 +304,6 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.1)
-    spring (2.0.2)
-      activesupport (>= 4.2)
-    spring-watcher-listen (2.0.1)
-      listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
     sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -372,8 +367,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   simplecov
-  spring
-  spring-watcher-listen (~> 2.0.0)
   therubyracer
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
