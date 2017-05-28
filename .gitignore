@@ -1,6 +1,4 @@
 
-/.bundle
-
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
@@ -20,7 +18,6 @@
 
 *.trash
 
-/vendor
 /tmp
 /log
 
