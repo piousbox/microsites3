@@ -26,13 +26,14 @@ gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 
 gem "devise", "~> 4.3" 
 
+# need this to run rake in production
+gem 'rspec'
+gem 'rspec-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
-  gem 'rspec'
-  gem 'rspec-rails'
   gem 'simplecov'
 end
 
