@@ -29,6 +29,7 @@ gem "devise", "~> 4.3"
 # need this to run rake in production
 gem 'rspec'
 gem 'rspec-rails'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
