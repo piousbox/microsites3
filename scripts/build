@@ -17,4 +17,4 @@ git checkout "$branch" &&
 git merge master &&
 git push &&
 
-echo ok
+echo "microsites3 build ok"
