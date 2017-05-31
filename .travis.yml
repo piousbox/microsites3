@@ -1,3 +1,4 @@
 
+services: mongodb
 before_install:
   - cp config/initializers/00_s3.rb-example config/initializers/00_s3.rb
