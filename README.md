@@ -7,3 +7,4 @@
 # Test
 
 # Deploy
+* aws small instance
