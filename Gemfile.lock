@@ -23,7 +23,7 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 34d403d1e67acbbe8ce938c8775a13bc5ee0c165
+  revision: cda5cb6d18cc4ee8ec1131204ee8c3dc0caa35a9
   branch: master
   specs:
     ishapi (0.1.8.13)
