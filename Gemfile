@@ -16,6 +16,7 @@ gem 'aws-sdk', '~> 2'
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "kaminari-mongoid"
+gem 'koala'
 gem 'unicorn'
 gem 'paperclip'
 gem 'rack-cors'
