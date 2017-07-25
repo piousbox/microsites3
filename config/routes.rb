@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   devise_for :users # , :skip => [ :registrations ]
   mount Ishapi::Engine, :at => '/api/'
   mount IshManager::Engine, :at => '/manager/'
+  
+  get 'sitemap',                   :to => 'sitemaps#show'
+  get 'sites/:domainname/sitemap', :to => 'sitemaps#show', :constraints => { :domainname => /.*/, :format => /xml/ }
 end
 
 
@@ -21,7 +24,6 @@ end
     get 'about', :to => 'welcome#about', :as => :about
     get 'privacy', :to => 'welcome#privacy', :as => :privacy
     get 'contact', :to => 'welcome#contact', :as => :contact
-    get 'sitemap', :to => 'utils/sitemaps#sitemap', :as => :sitemap
     
     devise_for :users, :controllers => {
       :sessions => "users/sessions",
