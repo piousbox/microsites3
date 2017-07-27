@@ -14,10 +14,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: e945c7a678e201c24c6dcbeaedc04b2b7b9b204c
+  revision: d19c1859ac310f527d5dfc3b85b1586aeb21696c
   branch: master
   specs:
-    ish_models (0.0.33.20)
+    ish_models (0.0.33.21)
       devise (> 0)
       mongoid (~> 6.1.0, >= 6.1.0)
 
