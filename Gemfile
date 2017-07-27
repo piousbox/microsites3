@@ -28,8 +28,6 @@ gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 gem "devise", "~> 4.3" 
 
 # need this to run rake in production
-gem 'rspec'
-gem 'rspec-rails'
 gem 'nokogiri'
 
 group :development, :test do
@@ -37,6 +35,10 @@ group :development, :test do
   gem 'capybara', '~> 2.13.0'
   gem 'selenium-webdriver'
   gem 'simplecov'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do

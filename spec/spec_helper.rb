@@ -11,14 +11,16 @@ require 'capybara/rspec'
 
 # require 'test/unit'
 
-# require 'devise'
-# include Warden::Test::Helpers
+require 'devise'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.infer_spec_type_from_file_location!
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
