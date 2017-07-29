@@ -32,6 +32,4 @@
 /config/mongoid.yml
 
 /data
-
-.bundle
 /vendor
