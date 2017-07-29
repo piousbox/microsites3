@@ -27,10 +27,9 @@ gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 
 gem "devise", "~> 4.3" 
 
-# need this to run rake in production
 gem 'nokogiri'
-gem 'rspec'
-gem 'rspec-rails'
+gem 'rspec'       # need this in production
+gem 'rspec-rails' # need this in production
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
