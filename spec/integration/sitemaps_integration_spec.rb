@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe 'sitemaps' do
   before :each do
-    @from_domain = 'pi.local'
+    @from_domain = 'piousbox.local'
     @to_domain = 'travel-guide.mobi'
     @paths = [ [ '/en/galleries/show_long/a',   '/en/galleries/show/a' ],
                [ '/en/galleries/show/a',        '/en/galleries/show/a' ],
@@ -25,8 +25,12 @@ describe 'sitemaps' do
 
   it 'redirect from piousbox.com to travel-guide.mobi' do
     @paths.each do |from_path, to_path|
-      result = HTTParty.get( "http://#{@from_domain}#{from_path}", :follow_redirects => false )
-      result.headers['location'].should eql "http://#{@to_domain}#{to_path}"
+      from_url = "http://#{@from_domain}#{from_path}"
+      to_url   = "http://#{@to_domain}#{to_path}"
+      puts! from_url, 'from'
+      puts! to_url, 'to'
+      result = HTTParty.get( from_url, :follow_redirects => false )
+      result.headers['location'].should eql to_url
       result.code.should eql 301
     end
   end
