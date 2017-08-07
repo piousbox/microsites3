@@ -26,7 +26,7 @@ GIT
   revision: c1ddb3bfb1e01b24f2d9d8ac008fbbacf7675946
   branch: master
   specs:
-    ishapi (0.1.8.23)
+    ishapi (0.1.8.24)
       cancancan (~> 2.0)
       fb_graph
       kaminari-actionview (~> 1.0)

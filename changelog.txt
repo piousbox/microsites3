@@ -10,3 +10,5 @@
 0.1.3 - vendor/bundle is in, lets not rebundle all the time
         capistrano is in
 0.1.4 - integration spec for webmasters
+
+LETS NOT FUCK WITH BRANCHES ANYMORE, IT FUCKS UP MY AUTOMATION
