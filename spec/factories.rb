@@ -25,6 +25,14 @@ FactoryGirl.define do
   factory :user do
     email 'test@gmail.com'
     password '12345678'
+
+    factory :manager do
+      email 'manager@gmail.com'
+    end
+
+    factory :piousbox do
+      email 'piousbox@gmail.com'
+    end
   end
 
 end

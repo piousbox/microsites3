@@ -21,7 +21,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.include Devise::Test::ControllerHelpers, :type => :controller
   
-  config.expect_with(:rspec) { |c| c.syntax = :should }
+  # config.expect_with(:rspec) { |c| c.syntax = :should }
 
   # ## Mock Framework
   #
@@ -117,9 +117,9 @@ end
 def setup_users
   User.unscoped.each { |c| c.remove }
   @user = FactoryGirl.create :user
-  @anon = FactoryGirl.create :anon
-  @simple = FactoryGirl.create :simple
-  @user_2 = FactoryGirl.create :user_2
+  # @anon = FactoryGirl.create :anon
+  # @simple = FactoryGirl.create :simple
+  # @user_2 = FactoryGirl.create :user_2
   @manager = FactoryGirl.create :manager
   @piousbox = FactoryGirl.create :piousbox
 end
