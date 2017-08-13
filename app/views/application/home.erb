@@ -1,2 +1,6 @@
 
-Welcome home! Ok
+<p>Welcome home!</p>
+<p><%= link_to( 'manager', ish_manager_path ) if current_user %></p>
+<script>
+  window.location = '/manager';
+</script>
