@@ -11,7 +11,10 @@ class SitemapsController < ApplicationController
         
         case params[:domainname]
         when 'travel-guide.mobi'
+          @site = Site.find_by( :domain => params[:domainname], :lang => :en )
           @cities = City.all
+          @reports = @site.reports # Report.all
+          @galleries = @site.galleries # Gallery.all
         when 'piousbox.com'
           @reports = Report.all
           @galleries = Gallery.all
