@@ -23,10 +23,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 58321083c4b12d64386c0f73c282d55079df5425
+  revision: 666fb10455d46ce67a58a0512d8890f00fed4d80
   branch: master
   specs:
-    ishapi (0.1.8.29)
+    ishapi (0.1.8.30)
       cancancan (~> 2.0)
       fb_graph
       kaminari-actionview (~> 1.0)
