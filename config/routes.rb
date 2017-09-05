@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root :to => 'application#home' 
   get 'users/sign_up', :to => 'application#home'
+
+  put '/v5', :to => 'application#test'
+
   devise_for :users, :skip => [ :registrations ]
   mount Ishapi::Engine, :at => '/api/'
   mount IshManager::Engine, :at => '/manager/'
