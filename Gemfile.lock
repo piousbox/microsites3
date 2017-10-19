@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: b5b7fab64318d651a6580136fa832443f94cdae3
+  revision: 38bbc09f9c9715a457f04f05b1a80b9629c401fa
   branch: master
   specs:
-    ish_manager (0.1.8.55)
+    ish_manager (0.1.8.56)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -14,10 +14,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: e79a49815c1be2e3c411888a9d1381ccf705ebd3
+  revision: ac605f0c8f51b2cc0d38863589739adb465cc4a4
   branch: master
   specs:
-    ish_models (0.0.33.30)
+    ish_models (0.0.33.31)
       devise (> 0)
       mongoid (~> 6.1.0, >= 6.1.0)
 
@@ -245,6 +245,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
+    oauth (0.5.3)
     orm_adapter (0.5.0)
     paperclip (5.1.0)
       activemodel (>= 4.2.0)
@@ -410,6 +411,7 @@ DEPENDENCIES
   mongoid (~> 6.1.0)
   mongoid-paperclip
   nokogiri
+  oauth
   paperclip
   puma (~> 3.7)
   rack-cors
