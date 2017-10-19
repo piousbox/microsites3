@@ -31,6 +31,9 @@ gem 'nokogiri'
 gem 'rspec'       # need this in production
 gem 'rspec-rails' # need this in production
 
+gem 'httparty'
+gem 'listen', '>= 3.0.5', '< 3.2'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13.0'
@@ -38,16 +41,10 @@ group :development, :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
   gem 'rails-controller-testing'
-  gem 'httparty'
-  # rspec is actually in production
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  # gem 'spring'
-  # gem 'spring-watcher-listen', '~> 2.0.0'
-
   gem 'capistrano', '~> 3.1'
   gem 'capistrano-rails', '~> 1.1'
 end
