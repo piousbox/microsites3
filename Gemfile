@@ -26,6 +26,7 @@ gem 'rack-cors'
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
 gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.8'
 gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
+gem 'stripe'
 
 gem "devise", "~> 4.3" 
 

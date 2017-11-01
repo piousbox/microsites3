@@ -29,6 +29,7 @@
 /config/initializers/s3.rb
 /config/initializers/00_s3.rb
 /config/initializers/koala.rb
+/config/initializers/05_stripe.rb
 /config/mongoid.yml
 
 /data

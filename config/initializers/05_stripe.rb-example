@@ -1,0 +1,5 @@
+
+if Rails.env.which_environment?
+  STRIPE_PK = 'pk_test_...'
+  STRIPE_SK = 'sk_test_...'
+end
