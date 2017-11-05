@@ -11,5 +11,3 @@
         capistrano is in
 0.1.4 - integration spec for webmasters
         wiring in cap for env vm
-
-LETS NOT FUCK WITH BRANCHES ANYMORE, IT FUCKS UP MY AUTOMATION
