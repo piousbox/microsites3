@@ -3,8 +3,6 @@ lock "3.8.1"
 set :application, "microsites3"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
 
-# set :scm, :git # @deprecated
-
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
 
@@ -14,5 +12,23 @@ set :repo_url, "git@github.com:piousbox/microsites3.git"
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-# Default value for keep_releases is 5
-# set :keep_releases, 5
+set :deploy_via, :remote_cache
+
+namespace :deploy do
+  task :bundle do
+    on roles(:web) do
+      execute "cd /home/oink/projects/microsites3/current && sudo /home/oink/.rbenv/versions/2.3.1/bin/bundle --path /home/oink/projects/microsites3/vendor/bundle"
+    end
+  end
+
+  task :restart_nginx do
+    on roles(:web) do
+      execute "sudo systemctl restart nginx.service"
+    end
+  end
+end
+
+after "deploy:published", "bundle"
+after "deploy:published", "restart_nginx"
+
+set :linked_files, %w( config/initializers/00_s3.rb config/mongoid.yml )

@@ -2,10 +2,7 @@
 set :deploy_user, 'oink'
 set :deploy_to, "/home/oink/projects/microsites3"
 
-server 'vm_12', :user => 'oink', :roles => %w( web app ), :primary => true
-
-after :finishing, :bundle
-after :finishing, :restart_nginx
+server 'vm_12', :user => 'oink', :roles => [ :web ], :primary => true
 
 # server-based syntax
 # ======================
