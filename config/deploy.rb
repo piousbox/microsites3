@@ -3,9 +3,7 @@ lock "3.8.1"
 set :application, "microsites3"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
 
-set :deploy_user, 'ubuntu'
 set :scm, :git
-set :deploy_to, "/home/ubuntu/projects/microsites3_capistrano"
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
