@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: c822f4ca0396b9c2984b141226c9d257c072ef83
+  revision: df5b5756f650a5f155384e8f6f4785002524f904
   branch: master
   specs:
-    ish_manager (0.1.8.63)
+    ish_manager (0.1.8.64)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -410,6 +410,7 @@ DEPENDENCIES
   aws-sdk (~> 2)
   byebug
   capistrano (~> 3.1)
+  capistrano-bundler
   capistrano-ext
   capistrano-rails (~> 1.1)
   capybara (~> 2.13.0)

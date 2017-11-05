@@ -4,6 +4,9 @@ set :deploy_to, "/home/oink/projects/microsites3"
 
 server 'vm_12', :user => 'oink', :roles => %w( web app ), :primary => true
 
+after :finishing, :bundle
+after :finishing, :restart_nginx
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
