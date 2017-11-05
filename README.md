@@ -11,6 +11,4 @@ port 3000
 # Deploy
 * aws small instance
 
-
-
-1.1
+ be cap vm deploy
