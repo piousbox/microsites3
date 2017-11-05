@@ -3,7 +3,7 @@ lock "3.8.1"
 set :application, "microsites3"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
 
-set :scm, :git
+# set :scm, :git # @deprecated
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml", "config/secrets.yml"
