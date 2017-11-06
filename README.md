@@ -12,3 +12,4 @@ port 3000
 * aws small instance
 
  be cap vm deploy
+ be cap aws_staging deploy
