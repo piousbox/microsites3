@@ -36,3 +36,6 @@ Rails.application.configure do
   }
 
 end
+
+Paperclip.options[:image_magick_path] = "/usr/bin"
+Paperclip.options[:command_path] = "/usr/bin"
