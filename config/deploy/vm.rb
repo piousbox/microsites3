@@ -2,7 +2,7 @@
 set :deploy_user, 'oink'
 set :deploy_to, "/home/oink/projects/microsites3"
 
-server 'vm_12', :user => 'oink', :roles => [ :web ], :primary => true
+server 'vm_14', :user => 'oink', :roles => [ :web ], :primary => true
 
 # server-based syntax
 # ======================
