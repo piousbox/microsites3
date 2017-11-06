@@ -15,7 +15,7 @@ set :deploy_via, :remote_cache
 namespace :deploy do
   task :bundle do
     on roles(:web) do
-      execute "cd /home/oink/projects/microsites3/current && sudo /home/oink/.rbenv/versions/2.3.1/bin/bundle --path /home/oink/projects/microsites3/vendor/bundle"
+      execute "cd /home/#{fetch(:app_user)}/projects/microsites3/current && sudo /home/#{fetch(:app_user)}/.rbenv/versions/2.3.1/bin/bundle --path /home/#{fetch(:app_user)}/projects/microsites3/vendor/bundle"
     end
   end
 
