@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   put '/v5', :to => 'application#test'
 
-  devise_for :users, :skip => [ :registrations ]
+  devise_for :users, :skip => [ :registrations ], :controllers => {
+               :sessions => 'users/sessions' }
   mount Ishapi::Engine, :at => '/api/'
   mount IshManager::Engine, :at => '/manager/'
   
