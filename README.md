@@ -11,5 +11,8 @@ port 3000
 # Deploy
 * aws small instance
 
+ bundle
+ RAILS_ENV=production be rake assets:precompile
+
  be cap vm deploy
  be cap aws_staging deploy
