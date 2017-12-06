@@ -1,8 +1,10 @@
 #!/bin/bash
 
-set -x
+/home/piousbox/projects/ruby/microsites3/ish_manager/scripts/build
 
-./ish_manager/scripts/build
+set -xe
+
+cd /home/piousbox/projects/ruby/microsites3
 
 branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
 
