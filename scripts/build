@@ -2,7 +2,7 @@
 
 set -x
 
-./ish_manager/script/build
+./ish_manager/scripts/build
 
 branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
 
