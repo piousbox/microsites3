@@ -6,7 +6,7 @@ set -x
 
 branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
 
-bundle &&
+bundle > /dev/null &&
 
 RAILS_ENV=production bundle exec rake assets:precompile &&
 
