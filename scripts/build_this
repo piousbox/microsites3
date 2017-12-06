@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -xe
+
+cd /home/piousbox/projects/ruby/microsites3
+
+branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
+
+bundle > /dev/null &&
+
+RAILS_ENV=production bundle exec rake assets:precompile &&
+
+git checkout master &&
+git merge "$branch" &&
+git add . &&
+git commit -m "autobuild `date "+%Y%m%d"`" 
+git push origin master &&
+git checkout "$branch" &&
+git merge master &&
+git push &&
+
+bundle exec cap aws_staging deploy
+
+echo "microsites3 build ok"
