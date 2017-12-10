@@ -13,6 +13,7 @@ namespace :tgm do
     @cities    = City.all
     @reports   = @site.reports
     @galleries = @site.galleries
+    n_photos = 0
 
     xml = Builder::XmlMarkup.new( :indent => 2 )
     xml.instruct!
@@ -33,6 +34,7 @@ namespace :tgm do
         end
       end
       @galleries.each do |gallery|
+        n_photos += gallery.photos.count
         gallery.photos.each_with_index do |photo, idx|
           xml.url do
             xml.loc "http://travel-guide.mobi/en/galleries/show/#{gallery.galleryname}/#{idx}"
@@ -49,6 +51,7 @@ namespace :tgm do
     puts "Venues: #{@cities.map { |c| c.venues.count }.reduce(:+)}"
     puts "Reports: #{@reports.count}"
     puts "Galleries: #{@galleries.count}"
+    puts "Photos: #{n_photos}"
   end
 
 end
