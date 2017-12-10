@@ -3,6 +3,7 @@ class SitemapsController < ApplicationController
 
   layout false
 
+  # obsolete, let's use the task instead. _vp_ 20171210
   def show
     @domain = "http://#{params[:domainname]}"
 
