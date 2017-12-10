@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/home/piousbox/projects/ruby/microsites3/ish_manager/scripts/build
+/home/piousbox/projects/ruby/microsites3/scripts/build_this
