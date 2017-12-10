@@ -44,7 +44,7 @@ namespace :tgm do
     end
 
     file = File.open( Rails.root.join( "sitemap_tgm.xml" ), 'w' )
-    file.write( xml.xml )
+    file.write( xml.target! )
 
     puts "TGM sitemap (in #{Rails.env}) #{Time.now}"
     puts "Cities: #{@cities.count}"
