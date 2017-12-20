@@ -4,11 +4,6 @@ set :application, "microsites3"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
 
 append :linked_files, "config/initializers/00_s3.rb", "config/mongoid.yml"
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-# set :linked_files, %w( config/initializers/00_s3.rb config/mongoid.yml )
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 set :deploy_via, :remote_cache
 
