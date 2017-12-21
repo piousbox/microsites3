@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 10ee0875a4b7fc16f979fbbc1770c421affc2b72
+  revision: af0fc29d80faf6bbdc9907f0ef39699c624bd9a6
   branch: master
   specs:
-    ish_manager (0.1.8.125)
+    ish_manager (0.1.8.126)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
