@@ -3,7 +3,7 @@ lock "3.8.1"
 set :application, "microsites3"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
 
-append :linked_files, "config/initializers/00_s3.rb", "config/mongoid.yml"
+append :linked_files, "config/initializers/00_s3.rb", "config/mongoid.yml", "config/initializers/koala.rb"
 
 set :deploy_via, :remote_cache
 
