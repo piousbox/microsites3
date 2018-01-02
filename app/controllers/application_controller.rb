@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     render :json => { :status => :ok }
   end
 
+  def share
+    render 'share'
+  end
+
 =begin
   rescue_from ::CanCan::AccessDenied, :with => :access_denied
   private

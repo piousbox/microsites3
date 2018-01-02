@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'users/sign_up', :to => 'application#home'
 
   put '/v5', :to => 'application#test'
+  get 'share', :to => 'application#share'
 
   devise_for :users, :skip => [ :registrations ], :controllers => {
                :sessions  => 'users/sessions',  :confirmations => 'users/confirmations',
