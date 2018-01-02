@@ -21,6 +21,7 @@ namespace :deploy do
   end
 end
 
+after "deploy:published", "restart_nginx" # to clear memory for bundler
 after "deploy:published", "bundle"
 after "deploy:published", "restart_nginx"
 
