@@ -44,7 +44,7 @@ namespace :crawl do
     profile = IshModels::UserProfile.find_by :email => 'piousbox@gmail.com'
 
     print "page 1: "
-    process_page page, profile
+    process_page Nokogiri::HTML(result.body), profile
 
     (2..n_pages).each do |pagenum|
       sleep 2
@@ -65,7 +65,7 @@ namespace :crawl do
     profile = IshModels::UserProfile.find_by :email => 'piousbox@gmail.com'
 
     print "page 1: "
-    process_page page, profile
+    process_page Nokogiri::HTML(result.body), profile
 
     (2..n_pages).each do |pagenum|
       sleep 2
