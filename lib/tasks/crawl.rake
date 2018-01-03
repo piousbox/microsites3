@@ -11,8 +11,15 @@ def process_page page, args={}
   companies.each_with_index do |company, idx|
     name = company.css('span')[0].text
     location = company.css('span')[1].text
+    next if Ish::Lead.where( :company => name ).length == 0
+
     lead = Ish::Lead.new :tag => tag, :location => location, :company => name, :profile => profile
-    if lead.save
+    begin
+      flag = lead.save
+    rescue e
+      puts! e
+    end
+    if flag
       print "#{idx+1}."
     else
       puts lead.errors.messages
@@ -39,7 +46,11 @@ namespace :crawl do
       sleep 2
       print "page #{pagenum}: "
       page = Nokogiri::HTML( HTTParty.get "https://hired.com/companies/react?page=#{pagenum}" )
-      process_page page, { :profile => profile, :tag => :hired_com_react }
+      begin
+        process_page page, { :profile => profile, :tag => :hired_com_react }
+      rescue e
+        puts! e
+      end
     end
   end
 
