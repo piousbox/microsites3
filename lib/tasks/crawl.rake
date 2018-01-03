@@ -5,7 +5,7 @@ def puts! a, b=''
 end
 
 def process_page page, args={}
-  profile   = args[:profile] || IshModels::UserProfile.find_by :email => 'piousbox@gmail.com'
+  profile   = args[:profile] || IshModels::UserProfile.find_by( :email => 'piousbox@gmail.com' )
   tag       = args[:tag] || :unknown_scraped_tag
   companies = page.css(".layout.xs-ptb1.xs-m0")
   companies.each_with_index do |company, idx|
