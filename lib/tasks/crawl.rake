@@ -45,8 +45,8 @@ namespace :crawl do
     (2..n_pages).each do |pagenum|
       sleep 2
       print "page #{pagenum}: "
-      page = Nokogiri::HTML( HTTParty.get "https://hired.com/companies/react?page=#{pagenum}" )
       begin
+        page = Nokogiri::HTML( HTTParty.get "https://hired.com/companies/react?page=#{pagenum}" )
         process_page page, { :profile => profile, :tag => :hired_com_react }
       rescue e
         puts! e
