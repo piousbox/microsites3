@@ -11,7 +11,7 @@ def process_page page, args={}
   companies.each_with_index do |company, idx|
     name = company.css('span')[0].text
     location = company.css('span')[1].text
-    next if Ish::Lead.where( :company => name ).length == 0
+    next if Ish::Lead.where( :company => name ).length != 0
 
     lead = Ish::Lead.new :tag => tag, :location => location, :company => name, :profile => profile
     begin
@@ -29,14 +29,18 @@ def process_page page, args={}
   puts ""
 end
 
+def compute_n_pages text
+  page = Nokogiri::HTML(text)
+  pagelinks = page.css(".page.xs-epsilon.sm-prlh0>a")
+  return pagelinks.map{ |p| p.text.to_i }.max
+end
+
 namespace :crawl do
 
   desc "hired react companies"
   task :hired_com_react => :environment do
     result = HTTParty.get "https://hired.com/companies/react?page=1"
-    page = Nokogiri::HTML(result.body)
-    pagelinks = page.css(".page.xs-epsilon.sm-prlh0>a")
-    n_pages = pagelinks.map( &:text ).max.to_i
+    n_pages = compute_n_pages( result.body )
     profile = IshModels::UserProfile.find_by :email => 'piousbox@gmail.com'
 
     print "page 1: "
@@ -57,9 +61,7 @@ namespace :crawl do
   desc "hired ror companies"
   task :hired_com_ror => :environment do
     result = HTTParty.get "https://hired.com/companies/ruby-on-rails?page=1"
-    page = Nokogiri::HTML(result.body)
-    pagelinks = page.css(".page.xs-epsilon.sm-prlh0>a")
-    n_pages = pagelinks.map( &:text ).max.to_i
+    n_pages = compute_n_pages( result.body )
     profile = IshModels::UserProfile.find_by :email => 'piousbox@gmail.com'
 
     print "page 1: "
