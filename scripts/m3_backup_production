@@ -17,7 +17,7 @@ set -ex
 MONGO_HOST="10.0.1.16"
 MONGO_DATABASE="ish_production"
 MONGO_PORT="27017"
-MONGODUMP_PATH="/usr/bin/mongodump" 
+MONGODUMP_PATH="/opt/mongodb/mongodump" 
 TIMESTAMP=`date +%Y%m%d`
 YEAR=`date +%Y`
 S3_BUCKET_NAME="ish-backups"
