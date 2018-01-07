@@ -15,7 +15,7 @@ set -ex
 
 ## config
 MONGO_HOST="10.0.1.16"
-MONGO_DATABASE="ish_production"
+MONGO_DATABASE="ish_production" # not used - I backup ish_production, bjjc_prod at the same time
 MONGO_PORT="27017"
 MONGODUMP_PATH="/opt/mongodb/mongodump" 
 TIMESTAMP=`date +%Y%m%d`
@@ -27,7 +27,7 @@ filename="${TIMESTAMP}_${MONGO_DATABASE}.tar.gz"
 cd /home/ubuntu/backups/
 rm -rf dump
 
-$MONGODUMP_PATH -h $MONGO_HOST:$MONGO_PORT -d $MONGO_DATABASE
+$MONGODUMP_PATH -h $MONGO_HOST:$MONGO_PORT
 tar cvzf "${filename}" dump
 s3cmd put "${filename}" s3://$S3_BUCKET_NAME/$YEAR/mongo/$filename
 
