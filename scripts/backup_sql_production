@@ -34,7 +34,7 @@ mysqldump -u root -pawesome_password -h 10.0.1.12 BJJCDB > BJJCDB.sql
 mysqldump -u root -pawesome_password -h 10.0.1.12 wiki_wasya > wiki_wasya.sql
 mysqldump -u root -pawesome_password -h 10.0.1.12 wordpress_piousbox > wordpress_piousbox.sql
 mysqldump -u root -pawesome_password -h 10.0.1.12 blog_wasya_co_2 > blog_wasya_co_2.sql
-mysqldump -u root -pawesome_password -h 10.0.1.12 blog_wevdevzine > blog_wevdevzine.sql
+mysqldump -u root -pawesome_password -h 10.0.1.12 blog_webdevzine > blog_webdevzine.sql
 
 tar cvzf $filename *sql
 s3cmd put "${filename}" s3://$S3_BUCKET_NAME/$YEAR/sql/$filename
