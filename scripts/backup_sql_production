@@ -37,7 +37,7 @@ mysqldump -u root -pawesome_password -h 10.0.1.12 blog_wasya_co_2 > blog_wasya_c
 mysqldump -u root -pawesome_password -h 10.0.1.12 blog_webdevzine > blog_webdevzine.sql
 
 tar cvzf $filename *sql
-s3cmd put "${filename}" s3://$S3_BUCKET_NAME/$YEAR/sql/$filename
+s3cmd put "${filename}" s3://$bucket/$year/sql/$filename
 
 # rm -rfv ${filename}
 # rm -rfv *sql
