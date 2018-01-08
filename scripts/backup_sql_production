@@ -1,0 +1,48 @@
+#!/bin/bash
+
+set -ex
+
+## install
+# wget http://ufpr.dl.sourceforge.net/project/s3tools/s3cmd/1.6.1/s3cmd-1.6.1.tar.gz
+# ...
+# yum install python-setuptools
+# sudo python setup.py install
+# s3cmd --configure
+#
+# crontab -l
+# crontab -e
+# 1 1 * * * /opt/projects/smt_rails/scripts/production_mongodb_to_s3_backup.sh
+
+## config
+host='10.0.1.12'
+timestamp=`date +%Y%m%d`
+year=`date +%Y`
+bucket="ish-backups"
+filename="${timestamp}_all-backups.sql.tar.gz"
+## Do
+cd /home/ubuntu/backups/
+rm *sql
+
+## app			app id		db name
+#
+# bjjc			?		BJJCDB
+# wiki.wasya.co		10.0.1.253	wiki_wasya
+# blog.piousbox.com 	10.0.1.166	wordpress_piousbox
+# blog.wasya.co 	10.0.1.166	blog_wasya_co_2
+# webdevzine.com	10.0.1.166	blog_wevdevzine
+mysqldump -u root -pawesome_password -h 10.0.1.12 BJJCDB > BJJCDB.sql
+mysqldump -u root -pawesome_password -h 10.0.1.12 wiki_wasya > wiki_wasya.sql
+mysqldump -u root -pawesome_password -h 10.0.1.12 wordpress_piousbox > wordpress_piousbox.sql
+mysqldump -u root -pawesome_password -h 10.0.1.12 blog_wasya_co_2 > blog_wasya_co_2.sql
+mysqldump -u root -pawesome_password -h 10.0.1.12 blog_wevdevzine > blog_wevdevzine.sql
+
+tar cvzf $filename *sql
+s3cmd put "${filename}" s3://$S3_BUCKET_NAME/$YEAR/sql/$filename
+
+# rm -rf ${filename}
+# rm -rf *sql
+
+echo "ok backed up all sql"
+
+
+

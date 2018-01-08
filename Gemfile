@@ -37,6 +37,7 @@ gem 'rspec-rails' # need this in production
 gem 'httparty'
 gem 'listen', '>= 3.0.5', '< 3.2'
 gem 'oauth'
+gem 'dropbox_api'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
