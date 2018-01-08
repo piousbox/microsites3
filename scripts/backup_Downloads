@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -ex
+
+rm -f /home/piousbox/Downloads_filelist
+find /home/piousbox/Dropbox/Downloads/ -not -path "*archive*" -not -path "*trash*" -type f > /home/piousbox/Downloads_filelist
+
+year=`date '+%Y'`
+date=`date '+%Y%m%d'`
+
+rm -f /home/piousbox/${date}_Downloads.tar.gz
+tar -cvf /home/piousbox/${date}_Downloads.tar.gz -T /home/piousbox/Downloads_filelist
+s3cmd put /home/piousbox/${date}_Downloads.tar.gz s3://ish-backups/${year}/Downloads/${date}_Downloads.tar.gz
+
+# rm /home/piousbox/Downloads_filelist
+# rm /home/piousbox/${date}_Downloads.tar.gz
+
+echo "ok backup Downloads"
