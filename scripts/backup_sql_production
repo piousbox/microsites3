@@ -21,7 +21,7 @@ bucket="ish-backups"
 filename="${timestamp}_all-backups.sql.tar.gz"
 ## Do
 cd /home/ubuntu/backups/
-rm *sql
+rm -rfv *sql
 
 ## app			app id		db name
 #
@@ -39,8 +39,8 @@ mysqldump -u root -pawesome_password -h 10.0.1.12 blog_wevdevzine > blog_wevdevz
 tar cvzf $filename *sql
 s3cmd put "${filename}" s3://$S3_BUCKET_NAME/$YEAR/sql/$filename
 
-# rm -rf ${filename}
-# rm -rf *sql
+# rm -rfv ${filename}
+# rm -rfv *sql
 
 echo "ok backed up all sql"
 
