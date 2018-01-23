@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: df0825cadcc190d7babc7922fdc08ca0a621730b
+  revision: 4efd9e7899d24feadea3b49394cf455f3d7b59e7
   branch: master
   specs:
-    ishapi (0.1.8.63)
+    ishapi (0.1.8.64)
       cancancan (~> 2.0)
       fb_graph
       jbuilder (~> 2.7)
