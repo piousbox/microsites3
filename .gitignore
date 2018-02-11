@@ -35,4 +35,6 @@
 /data
 /vendor
 
+/ishapi/test/dummy/vendor
+
 .access
