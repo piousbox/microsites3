@@ -19,7 +19,7 @@ class Yelp
       phone = company.css('span.biz-phone').text
       next if Ish::Lead.where( :company => name ).length != 0
       
-      lead = Ish::Lead.new :tag => args[:tag], :company => name, :profile => profile, :url => url, :phone => phone
+      lead = Ish::Lead.new :tag => args[:tag], :company => name, :profile => profile, :yelp_url => url, :phone => phone
       begin
         flag = lead.save
       rescue e
@@ -28,8 +28,8 @@ class Yelp
       if flag
         print "#{idx+1}."
       else
-        puts lead.errors.messages
-        puts lead.inspect
+        puts! lead.errors.messages
+        puts! lead.inspect
       end
     end
     puts ""
@@ -39,7 +39,7 @@ class Yelp
     q       = "Dentist"
     loc     = "San Jose, CA"
     start   = 0
-    max     = 10
+    max     = 20
     profile = IshModels::UserProfile.find_by :email => 'piousbox@gmail.com'
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
 
