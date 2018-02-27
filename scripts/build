@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# specifically no -x flag!
-set -e
+# specifically no -e flag!
+set -x
 
 cd /home/piousbox/projects/ruby/microsites3
 
