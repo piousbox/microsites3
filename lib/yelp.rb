@@ -7,7 +7,7 @@ end
 
 class Yelp
 
-  TAG_DENTISTS = :yelp_dentists
+  TAG_DENTISTS = 'yelp_dentists'
   USER_AGENT   = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
     
   def self.process_single_company args = {}
@@ -32,6 +32,8 @@ class Yelp
       phone = company.css('span.biz-phone').text
       next if Ish::Lead.where( :company => name ).length != 0
       
+      puts! name, 'name'
+
       lead = Ish::Lead.new :tag => args[:tag], :company => name, :profile => profile,
                            :yelp_url => url, :phone => phone
 
