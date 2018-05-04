@@ -6,6 +6,12 @@
 
 port 3000
 
+# Develop on Mac
+
+/usr/local/lib/mongodb # that's in ~/.bashrc
+
+ sudo brew services restart httpd
+
 # Test
 
 # Deploy
@@ -16,5 +22,3 @@ port 3000
 
  be cap vm deploy
  be cap aws_staging deploy
-
-
