@@ -2,7 +2,7 @@
 
 set -xe
 
-cd /home/piousbox/projects/ruby/microsites3
+cd ~/projects/ruby/microsites3
 
 branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
 
