@@ -35,7 +35,7 @@ def compute_n_pages text
   return pagelinks.map{ |p| p.text.to_i }.max
 end
 
-namespace :crawl do
+namespace :hired_crawl do
 
   desc "hired react companies"
   task :hired_com_react => :environment do

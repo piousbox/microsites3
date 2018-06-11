@@ -27,8 +27,6 @@ describe 'sitemaps' do
     @paths.each do |from_path, to_path|
       from_url = "http://#{@from_domain}#{from_path}"
       to_url   = "http://#{@to_domain}#{to_path}"
-      puts! from_url, 'from'
-      puts! to_url, 'to'
       result = HTTParty.get( from_url, :follow_redirects => false )
       result.headers['location'].should eql to_url
       result.code.should eql 301

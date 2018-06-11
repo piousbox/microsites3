@@ -31,10 +31,11 @@ $MONGODUMP_PATH -h $MONGO_HOST:$MONGO_PORT
 tar cvzf "${filename}" dump
 s3cmd put "${filename}" s3://$S3_BUCKET_NAME/$YEAR/mongo/$filename
 
-# rm -rf ${filename}
-# rm -rf dump
+## cleanup
+rm -rf ${filename}
+rm -rf dump
 
-echo "ok backed up ${MONGO_DATABASE}"
+echo "ok backup ${MONGO_DATABASE}"
 
 
 
