@@ -36,4 +36,26 @@ namespace :ish do
     puts! reports.map { |r| r.update_attributes( :is_trash => true ) }, 'trashed?'
   end
 
+  desc 'export domain/lang reports; run with no params for usage'
+  task :export_reports_csv => :environment do
+    if !ENV['domain']
+      raise "be rake ish:export_reports_csv domain=<d> [lang=<en>] [trash=true]" 
+    end
+    lang = ENV['lang'] || 'en'
+
+    reports = Site.where( :domain => ENV['domain'], :lang => lang ).first.reports
+    puts! reports.length, 'length'
+    if ENV['trash']
+      puts! reports.map { |r| r.update_attributes( :is_trash => true ) }, 'trashed?'
+    end
+    if reports.length > 0
+      CSV.open( Rails.root.join( "#{ENV['domain']}_#{lang}_reports.csv" ), 'w' ) do |csv|
+        csv << %w{ title subtitle descr created_at }
+        reports.each do |r|
+          csv << [ r.name, r.subhead, r.descr, r.created_at ]
+        end
+      end
+    end
+  end
+
 end

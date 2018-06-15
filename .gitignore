@@ -6,7 +6,6 @@
 
 /log/*
 /tmp/*
-tmp.csv
 !/log/.keep
 !/tmp/.keep
 
