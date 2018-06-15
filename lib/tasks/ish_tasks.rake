@@ -43,7 +43,8 @@ namespace :ish do
     end
     lang = ENV['lang'] || 'en'
 
-    reports = Site.where( :domain => ENV['domain'], :lang => lang ).first.reports
+    reports = Site.where( :domain => ENV['domain'], :lang => lang 
+      ).first.reports.unscoped.where( :is_trash.in => [ false, nil ] )
     puts! reports.length, 'length'
     if ENV['trash']
       puts! reports.map { |r| r.update_attributes( :is_trash => true ) }, 'trashed?'
