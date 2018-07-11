@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: d1cf3e37e084a88f806415332b7362274241b0eb
+  revision: 09df78a9140446e769f5abd078cb798308fc7c1e
   branch: master
   specs:
-    ish_manager (0.1.8.149)
+    ish_manager (0.1.8.150)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 10b4902342cd88b235860e4eb45207224334455f
+  revision: b6e6f2e369f3a995510a69e8a5020f0a4a46169f
   branch: master
   specs:
-    ish_models (0.0.33.69)
+    ish_models (0.0.33.70)
       aws-sdk
       devise (> 0)
       kaminari-mongoid (~> 1.0.1)
@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 5bbb01b3503165dbba763ec93fc250824d8ffea3
+  revision: 648fff2136096daf31a21d5bd6b7744d692feee7
   branch: master
   specs:
-    ishapi (0.1.8.69)
+    ishapi (0.1.8.75)
       cancancan (~> 2.0)
       fb_graph
       jbuilder (~> 2.7)
@@ -98,6 +98,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    aes_key_wrap (1.0.1)
     airbrussh (1.3.0)
       sshkit (>= 1.6.1, != 1.7.0)
     arbre (1.1.1)
@@ -113,11 +114,12 @@ GEM
       aws-sdk-core (= 2.10.123)
     aws-sigv4 (1.0.2)
     bcrypt (3.1.11)
+    bindata (2.4.3)
     bindex (0.5.0)
     bson (4.3.0)
     builder (3.2.3)
     byebug (9.1.0)
-    cancancan (2.1.3)
+    cancancan (2.2.0)
     capistrano (3.8.1)
       airbrussh (>= 1.0.0)
       i18n
@@ -208,6 +210,10 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.1.0)
+    json-jwt (1.9.4)
+      activesupport
+      aes_key_wrap
+      bindata
     jwt (1.5.6)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
@@ -287,12 +293,12 @@ GEM
     puma (3.11.2)
     rack (2.0.3)
     rack-cors (1.0.2)
-    rack-oauth2 (1.7.0)
-      activesupport (>= 2.3)
-      attr_required (>= 0.0.5)
-      httpclient (>= 2.4)
-      multi_json (>= 1.3.6)
-      rack (>= 1.1)
+    rack-oauth2 (1.9.2)
+      activesupport
+      attr_required
+      httpclient
+      json-jwt (>= 1.9.0)
+      rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
     rack-throttle (0.5.0)
