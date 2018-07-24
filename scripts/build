@@ -3,6 +3,10 @@
 # specifically no -e flag!
 set -x
 
+if ! (( ssh-add -L | grep mac_id_rsa )) ; then
+  ssh-add ~/.ssh/mac_id_rsa
+fi
+
 cd ~/projects/ruby/microsites3
 
 branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
