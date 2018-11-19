@@ -24,6 +24,6 @@ git checkout "$branch" &&
 git merge master &&
 git push &&
 
-bundle exec cap aws_staging deploy
+bundle exec cap do deploy
 
 echo "microsites3 build ok"
