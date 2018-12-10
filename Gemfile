@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'ffi', '1.9.21'
 gem 'rake'
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
@@ -20,7 +21,7 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "mongoid-autoinc", "~> 6.0"
 
 # herehere
-gem 'aws-sdk-s3', "~> 3"
+# gem 'aws-sdk-s3', "~> 3"
 
 gem "kaminari-mongoid"
 gem 'koala'
