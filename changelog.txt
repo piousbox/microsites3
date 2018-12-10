@@ -12,4 +12,5 @@
 0.1.4 - integration spec for webmasters
         wiring in cap for env vm
 0.1.5 - crawlers will be in this codebase
-0.1.6 - transitioned to do
+0.1.6 - docker for development (cant solve the ffi issue on mac)
+        transitioned to do
