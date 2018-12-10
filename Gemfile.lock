@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 6c9f29399cd889ee3938567dcf138d8e95faad0b
+  revision: 8d96c7be81d0fe7d1e64b9fc2df3e16f1cad00b7
   branch: master
   specs:
-    ishapi (0.1.8.80)
+    ishapi (0.1.8.82)
       cancancan (~> 2.0)
       fb_graph
       jbuilder (~> 2.7)
@@ -114,7 +114,7 @@ GEM
       aws-sdk-core (= 2.10.123)
     aws-sigv4 (1.0.2)
     bcrypt (3.1.11)
-    bindata (2.4.3)
+    bindata (2.4.4)
     bindex (0.5.0)
     bson (4.3.0)
     builder (3.2.3)
@@ -293,7 +293,7 @@ GEM
     puma (3.11.2)
     rack (2.0.3)
     rack-cors (1.0.2)
-    rack-oauth2 (1.9.2)
+    rack-oauth2 (1.9.3)
       activesupport
       attr_required
       httpclient
@@ -301,7 +301,7 @@ GEM
       rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
-    rack-throttle (0.5.0)
+    rack-throttle (0.7.0)
       bundler (>= 1.0.0)
       rack (>= 1.0.0)
     rails (5.1.4)
