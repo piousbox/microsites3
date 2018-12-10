@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'rake'
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
 gem 'puma', '~> 3.7'
@@ -18,6 +19,9 @@ gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "mongoid-autoinc", "~> 6.0"
 
+# herehere
+gem 'aws-sdk-s3'
+
 gem "kaminari-mongoid"
 gem 'koala'
 gem 'unicorn'
@@ -27,6 +31,7 @@ gem 'rack-cors'
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
 gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.10'
 gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
+
 gem 'stripe'
 
 gem "devise", "~> 4.3" 
