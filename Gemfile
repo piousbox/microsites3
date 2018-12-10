@@ -19,6 +19,7 @@ gem 'aws-sdk', '~> 2'
 gem 'mongoid', '~> 6.1.0'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "mongoid-autoinc", "~> 6.0"
+gem 'mongo_session_store'
 
 # herehere
 # gem 'aws-sdk-s3', "~> 3"
