@@ -20,7 +20,7 @@ gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "mongoid-autoinc", "~> 6.0"
 
 # herehere
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', "~> 3"
 
 gem "kaminari-mongoid"
 gem 'koala'

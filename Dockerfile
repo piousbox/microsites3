@@ -8,7 +8,8 @@ RUN echo "alias ll=\"ls -lah \"" >> ~/.bashrc
 RUN echo "alias be=\"bundle exec \"" >> ~/.bashrc
 RUN gem install bundler
 
-COPY Gemfile /tmp/ # cannot copy Gemfile.lock, references non-existing ish_manager
+# cannot copy Gemfile.lock, references non-existing ish_manager
+COPY Gemfile /tmp/
 WORKDIR /tmp
 RUN bundle install
 
