@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    image: microsites3
+    build: .
+    ports:
+      - "3011:3000"
+    environment:
+      MONGOPORT: "27025"
+      # MONGOHOST: "mongo"
+      # MONGOUSER: "changeme"
+      # MONGOPASS: "changeme"
+    volumes: 
+      - "./:/home/ubuntu/projects/microsites3" 
