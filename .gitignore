@@ -40,3 +40,5 @@
 /ishapi/test/dummy/vendor
 
 .access
+*.swp
+/db/mongodata

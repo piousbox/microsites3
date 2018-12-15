@@ -1,0 +1,32 @@
+version: '3'
+services:
+
+  microsites3:
+    build: .
+    container_name: 'microsites3'
+    # command: rails server --port 3011
+    command: ./scripts/noop.sh
+    image: ruby:2.5
+    environment:
+      - RAILS_ENV=development
+    volumes:
+      - .:/opt/microsites3/
+    ports:
+      - 3000:3000
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:4.0
+    container_name: 'mongodb'
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./db/mongodata:/data/db
+    ports:
+      - 27017:27017
+    command: mongod --smallfiles --logpath=/dev/null
+
