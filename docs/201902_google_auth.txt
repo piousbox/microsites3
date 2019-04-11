@@ -1,0 +1,18 @@
+
+From: https://github.com/googleapis/google-api-ruby-client/blob/master/samples/web/app.rb
+From: https://github.com/zquestz/omniauth-google-oauth2
+from: https://github.com/jwt/ruby-jwt
+
+ http://localhost:3000/auth/google_oauth2
+ decoded = JWT.decode id_token, nil, false
+
+-=----- What to do?
+
+* auth on the frontend, keep the token
+* auth on the backend every time with jwt, I guess
+* write specs for everything
+
+* now that I have the identity, display my own name in the sidebar
+* create a simple view of pics, for myself only (for Klau, really)
+* write the spec for it
+

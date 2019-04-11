@@ -23,3 +23,4 @@ port 3000
  be cap vm deploy
  be cap aws_staging deploy
 
+ GOOGLE_APPLICATION_CREDENTIALS=./.access/travel-guide-mobi-5550d8f15645.json be rails s

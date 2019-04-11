@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 112e48bd37ce963fe55480990d9450af50794feb
+  revision: 074eab5973d17a3a782b2c3958b18995d9f8c73b
   branch: master
   specs:
-    ish_manager (0.1.8.160)
+    ish_manager ()
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 95e8a7d45a4e4b266573f4ecf9a854b139bdb9a4
+  revision: ec2270314ad5a1899e3bd748f300e44a3aae9900
   branch: master
   specs:
-    ish_models (0.0.33.78)
+    ish_models ()
       aws-sdk
       devise (> 0)
       kaminari-mongoid (~> 1.0.1)
@@ -28,12 +28,13 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 8d96c7be81d0fe7d1e64b9fc2df3e16f1cad00b7
+  revision: 0cd1366053e915d3e165b267696db1a1e851426a
   branch: master
   specs:
-    ishapi (0.1.8.82)
+    ishapi ()
       cancancan (~> 2.0)
       fb_graph
+      googleauth (~> 0.8.0)
       jbuilder (~> 2.7)
       kaminari-actionview (~> 1.0)
       kaminari-mongoid (~> 1.0)
@@ -70,16 +71,16 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activeadmin (1.3.0)
+    activeadmin (1.4.3)
       arbre (>= 1.1.1)
       coffee-rails
       formtastic (~> 3.1)
       formtastic_i18n
-      inherited_resources (>= 1.7.0)
+      inherited_resources (>= 1.9.0)
       jquery-rails (>= 4.2.0)
       kaminari (>= 0.15)
       railties (>= 4.2, < 5.3)
-      ransack (~> 1.3)
+      ransack (>= 1.8.7)
       sass (~> 3.1)
       sprockets (< 4.1)
     activejob (5.1.4)
@@ -119,7 +120,7 @@ GEM
     bson (4.3.0)
     builder (3.2.3)
     byebug (9.1.0)
-    cancancan (2.2.0)
+    cancancan (2.3.0)
     capistrano (3.8.1)
       airbrussh (>= 1.0.0)
       i18n
@@ -182,21 +183,29 @@ GEM
     formtastic_i18n (0.6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    googleauth (0.8.0)
+      faraday (~> 0.12)
+      jwt (>= 1.4, < 3.0)
+      memoist (~> 0.16)
+      multi_json (~> 1.11)
+      os (>= 0.9, < 2.0)
+      signet (~> 0.7)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    hashie (3.6.0)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
     i18n (0.9.3)
       concurrent-ruby (~> 1.0)
-    inherited_resources (1.8.0)
-      actionpack (>= 4.2, <= 5.2)
+    inherited_resources (1.9.0)
+      actionpack (>= 4.2, < 5.3)
       has_scope (~> 0.6)
-      railties (>= 4.2, <= 5.2)
+      railties (>= 4.2, < 5.3)
       responders
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -207,10 +216,11 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.1.0)
-    json-jwt (1.9.4)
-      activesupport
+    json-jwt (1.10.0)
+      activesupport (>= 4.2)
       aes_key_wrap
       bindata
+    jwt (2.1.0)
     kaminari (1.1.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.1.1)
@@ -241,6 +251,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    memoist (0.16.0)
     method_source (0.9.0)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -270,15 +281,30 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     oauth (0.5.4)
+    oauth2 (1.4.1)
+      faraday (>= 0.8, < 0.16.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    omniauth (1.9.0)
+      hashie (>= 3.4.6, < 3.7.0)
+      rack (>= 1.6.2, < 3)
+    omniauth-google-oauth2 (0.6.0)
+      jwt (>= 2.0)
+      omniauth (>= 1.1.1)
+      omniauth-oauth2 (>= 1.5)
+    omniauth-oauth2 (1.6.0)
+      oauth2 (~> 1.1)
+      omniauth (~> 1.9)
     orm_adapter (0.5.0)
+    os (1.0.0)
     paperclip (5.1.0)
       activemodel (>= 4.2.0)
       activesupport (>= 4.2.0)
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    polyamorous (1.3.3)
-      activerecord (>= 3.0)
     public_suffix (3.0.1)
     puma (3.11.2)
     rack (2.0.3)
@@ -323,12 +349,11 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.19.0)
     rake (12.3.0)
-    ransack (1.8.8)
-      actionpack (>= 3.0)
-      activerecord (>= 3.0)
-      activesupport (>= 3.0)
+    ransack (2.1.1)
+      actionpack (>= 5.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
       i18n
-      polyamorous (~> 1.3.2)
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -373,6 +398,11 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    signet (0.11.0)
+      addressable (~> 2.3)
+      faraday (~> 0.9)
+      jwt (>= 1.5, < 3.0)
+      multi_json (~> 1.10)
     simplecov (0.15.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -390,7 +420,7 @@ GEM
       net-ssh (>= 2.8.0)
     stripe (3.9.1)
       faraday (~> 0.10)
-    temple (0.8.0)
+    temple (0.8.1)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
@@ -435,11 +465,13 @@ DEPENDENCIES
   capybara (~> 2.13.0)
   devise (~> 4.3)
   factory_girl_rails
+  googleauth
   httparty
   ish_manager!
   ish_models!
   ishapi!
   jbuilder (~> 2.7)
+  jwt
   kaminari-mongoid
   koala
   listen (>= 3.0.5, < 3.2)
@@ -449,6 +481,8 @@ DEPENDENCIES
   newrelic_rpm
   nokogiri (~> 1.8.1)
   oauth
+  omniauth
+  omniauth-google-oauth2
   paperclip
   puma (~> 3.7)
   rack-cors
@@ -469,4 +503,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.17.2
+   2.0.1

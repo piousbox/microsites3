@@ -13,3 +13,6 @@
         wiring in cap for env vm
 0.1.5 - crawlers will be in this codebase
 0.1.6 - transitioned to do
+        dokerizing
+				adding google oauth2, omniauth - for integration with tgm_native
+

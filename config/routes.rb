@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   
   get 'sitemap',                   :to => 'sitemaps#show'
   get 'sites/:domainname/sitemap', :to => 'sitemaps#show', :constraints => { :domainname => /.*/, :format => /xml/ }
+
+  get '/auth/google_oauth2/callback', to: 'application#auth_callback'
+  
 end
 
 

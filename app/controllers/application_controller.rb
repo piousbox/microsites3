@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :authenticate_user!, :except => [ :test, :share ]
+  before_action :authenticate_user!, :except => [ :test, :share, :auth_callback ]
   
   def home
   end
@@ -11,6 +11,12 @@ class ApplicationController < ActionController::Base
 
   def share
     render 'share'
+  end
+
+  def auth_callback
+    puts! params, 'params'
+    puts! request.env['omniauth.auth'], 'hash'
+    render 'empty'
   end
 
 =begin

@@ -20,6 +20,7 @@ gem "mongoid-autoinc", "~> 6.0"
 
 gem "kaminari-mongoid"
 gem 'koala'
+
 gem 'unicorn'
 gem 'paperclip'
 gem 'rack-cors'
@@ -41,6 +42,13 @@ gem 'oauth'
 # gem 'dropbox_api'
 gem 'tzinfo-data'
 gem 'tzinfo'
+
+# gem 'google-api-client'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'jwt'
+gem 'googleauth'
+# gem 'google-api-client' # , '~> 0.4.3', :require => 'google/api_client'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
