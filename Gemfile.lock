@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: ec2270314ad5a1899e3bd748f300e44a3aae9900
+  revision: 28788539f211a13b58653e1428daf8e04c7aa9bd
   branch: master
   specs:
     ish_models (0)
@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 9079eaf5d5b16c6726afae3f5e5285c0ba3dbaea
+  revision: 444008993e5931d7af27ddbfa071463a0dc6b2b0
   branch: master
   specs:
     ishapi (0)

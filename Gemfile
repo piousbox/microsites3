@@ -26,7 +26,7 @@ gem 'paperclip'
 gem 'rack-cors'
 
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
-gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.10'
+gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.10
 gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 gem 'stripe'
 
