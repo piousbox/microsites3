@@ -3,7 +3,7 @@ GIT
   revision: 24f2ade96142ad418236101a8496ca3b53c83a99
   branch: master
   specs:
-    ish_manager (0)
+    ish_manager (0.1.8.165)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -18,7 +18,7 @@ GIT
   revision: 28788539f211a13b58653e1428daf8e04c7aa9bd
   branch: master
   specs:
-    ish_models (0)
+    ish_models (0.0.33.79)
       aws-sdk
       devise (> 0)
       kaminari-mongoid (~> 1.0.1)
@@ -31,7 +31,7 @@ GIT
   revision: 444008993e5931d7af27ddbfa071463a0dc6b2b0
   branch: master
   specs:
-    ishapi (0)
+    ishapi (0.1.8.87)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
