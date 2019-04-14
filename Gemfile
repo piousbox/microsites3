@@ -22,7 +22,7 @@ gem "kaminari-mongoid"
 gem 'koala'
 
 gem 'unicorn'
-gem 'paperclip'
+gem 'paperclip', "~> 5.3.0"
 gem 'rack-cors'
 
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
