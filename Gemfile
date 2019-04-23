@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'ahoy_matey'
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
 gem 'puma', '~> 3.7'
