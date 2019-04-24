@@ -39,3 +39,11 @@ end
 
 Paperclip.options[:image_magick_path] = "/usr/bin"
 Paperclip.options[:command_path] = "/usr/bin"
+
+Rails.application.config.middleware.use ExceptionNotification::Rack,
+  email: {
+    deliver_with: :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
+    email_prefix: '[M3] ',
+    sender_address: %{"m3 exceptionist" <autobot@wasya.co>},
+    exception_recipients: %w{piousbox@gmail.com}
+  }

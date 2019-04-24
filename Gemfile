@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'ahoy_matey'
+gem 'exception_notification'
+
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
 gem 'puma', '~> 3.7'
