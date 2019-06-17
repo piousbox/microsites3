@@ -45,6 +45,7 @@ gem 'oauth'
 # gem 'dropbox_api'
 gem 'tzinfo-data'
 gem 'tzinfo'
+gem 'whenever'
 
 # gem 'google-api-client'
 gem 'omniauth'
