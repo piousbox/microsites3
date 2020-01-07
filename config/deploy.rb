@@ -1,16 +1,25 @@
 lock "3.8.1"
 
-set :application, "microsites3"
+set :application, "microsites3a"
+set :ruby_version, "2.5.0"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
+set :deploy_to, "/home/ubuntu/projects/microsites3a"
 
 append :linked_files, "config/initializers/00_s3.rb", "config/mongoid.yml", "config/initializers/koala.rb", "config/initializers/05_stripe.rb"
 
 set :deploy_via, :remote_cache
 
+this_script =<<~AOL
+  cd #{fetch(:deploy_to)}/current
+  rm -rf .bundle
+  rm Gemfile.lock
+  bundle --path vendor/bundle
+AOL
+
 namespace :deploy do
   task :bundle do
     on roles(:web) do
-      execute "cd /home/#{fetch(:app_user)}/projects/microsites3/current && sudo /home/#{fetch(:app_user)}/.rbenv/versions/2.3.1/bin/bundle --path /home/#{fetch(:app_user)}/projects/microsites3/vendor/bundle"
+      execute "cd #{fetch(:deploy_to)}/current && sudo /home/#{fetch(:app_user)}/.rbenv/versions/#{fetch(:ruby_version)}/bin/bundle --path /home/#{fetch(:app_user)}/projects/#{fetch(:application)}/vendor/bundle"
     end
   end
 

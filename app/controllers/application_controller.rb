@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
     render :json => { :status => :ok }
   end
 
+  def error
+    render 'nonexistent'
+  end
+  
   def share
     render 'share'
   end

@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'ahoy_matey'
+gem 'exception_notification'
+
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
 gem 'puma', '~> 3.7'
@@ -22,11 +25,11 @@ gem "kaminari-mongoid"
 gem 'koala'
 
 gem 'unicorn'
-gem 'paperclip'
+gem 'paperclip', "~> 5.3.0"
 gem 'rack-cors'
 
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
-gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.10'
+gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.10
 gem 'ishapi',      :github => 'piousbox/ishapi',      :branch => :master
 gem 'stripe'
 
@@ -42,6 +45,7 @@ gem 'oauth'
 # gem 'dropbox_api'
 gem 'tzinfo-data'
 gem 'tzinfo'
+gem 'whenever'
 
 # gem 'google-api-client'
 gem 'omniauth'
