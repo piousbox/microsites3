@@ -1,6 +1,4 @@
-
 Rails.application.configure do
-
   config.cache_classes = true
   config.eager_load = true
   config.consider_all_requests_local = true
@@ -9,7 +7,7 @@ Rails.application.configure do
   config.public_file_server.enabled = true # ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.assets.js_compressor = :uglifier
   config.assets.compile = true
-  config.log_level = :error
+  config.log_level = :debug
   config.log_tags = [ :request_id ]
   config.action_mailer.perform_caching = false
   config.i18n.fallbacks = true
@@ -34,7 +32,6 @@ Rails.application.configure do
     :user_name            => ENV["GMAIL_USERNAME"],
     :password             => ENV["GMAIL_PASSWORD"]
   }
-
 end
 
 Paperclip.options[:image_magick_path] = "/usr/bin"
