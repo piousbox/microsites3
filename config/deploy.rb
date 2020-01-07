@@ -25,7 +25,8 @@ namespace :deploy do
 
   task :restart_nginx do
     on roles(:web) do
-      execute "sudo systemctl restart nginx.service"
+      # execute "sudo systemctl restart nginx.service"
+      execute "sudo pkill nginx; sleep 1; sudo nginx"
     end
   end
 end
