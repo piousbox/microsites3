@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 36132f83795abaea4333d340cbb4a61c3d18e50b
+  revision: 5a097d3ccad3a1b9cf308a08549c4e0105bd9bd5
   branch: master
   specs:
-    ish_models (0.0.33.95)
+    ish_models (0.0.33.96)
       aws-sdk
       devise (> 0)
       kaminari-mongoid (~> 1.0.1)
@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: edf9a6795997ea42e8b1dac71e1aab5f817e6e55
+  revision: d92d07668f4e689ea0afef31d972bf2be1b62ee2
   branch: master
   specs:
-    ishapi (0.1.8.106)
+    ishapi (0.1.8.107)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
