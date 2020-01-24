@@ -17,7 +17,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'aws-sdk', '~> 2'
-gem 'mongoid', '~> 6.1.0'
+gem 'mongoid', '~> 7.0.5'
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
 gem "mongoid-autoinc", "~> 6.0"
 gem "mongo_session_store"
