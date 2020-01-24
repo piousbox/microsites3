@@ -277,7 +277,7 @@ GEM
     mime-types-data (3.2019.0331)
     mimemagic (0.3.3)
     mini_mime (1.0.1)
-    mini_portile2 (2.3.0)
+    mini_portile2 (2.4.0)
     minitest (5.11.3)
     mongo (2.8.0)
       bson (>= 4.4.2, < 5.0.0)
@@ -302,8 +302,8 @@ GEM
     net-ssh (5.2.0)
     newrelic_rpm (6.2.0.354)
     nio4r (2.3.1)
-    nokogiri (1.8.5)
-      mini_portile2 (~> 2.3.0)
+    nokogiri (1.10.4)
+      mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
     oauth2 (1.4.1)
       faraday (>= 0.8, < 0.16.0)
@@ -520,7 +520,7 @@ DEPENDENCIES
   mongoid-autoinc (~> 6.0)
   mongoid-paperclip
   newrelic_rpm
-  nokogiri (~> 1.8.1)
+  nokogiri (~> 1.10.4)
   oauth
   omniauth
   omniauth-google-oauth2
