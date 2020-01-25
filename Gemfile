@@ -36,7 +36,7 @@ gem 'stripe'
 
 gem "devise", "~> 4.3" 
 
-gem 'nokogiri', '~> 1.8.1'
+gem 'nokogiri', '~> 1.10.4'
 gem 'rspec'       # need this in production
 gem 'rspec-rails' # need this in production
 
