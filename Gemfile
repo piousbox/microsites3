@@ -10,7 +10,7 @@ gem 'exception_notification'
 
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
@@ -27,7 +27,7 @@ gem 'koala'
 
 gem 'unicorn'
 gem 'paperclip', "~> 5.3.0"
-gem 'rack-cors'
+gem 'rack-cors', '~> 1.0'
 
 gem 'ish_models',  :github => 'piousbox/ish_models',  :branch => :master
 gem 'ish_manager', :github => 'piousbox/ish_manager', :branch => :master # '0.1.10
