@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/piousbox/microsites3_api.svg?branch=master)](https://travis-ci.org/piousbox/microsites3_api)
 
-= Develop =
+# Develop 
  alias be='bundle exec '
 
 We are on branch `master`. However, the alphanumeric-latest branch is also most recent, currently 0.1.8.
@@ -22,8 +22,8 @@ We are standardizing on port 3001 right now. Then go to http://localhost:3001 an
 
 That should log you in. You are ready to use the application.
 
-= Test =
+# Test 
 Placeholder - tests are pretty elaborate, let's skip them in the initial setup
 
-= Deploy =
+# Deploy 
 Deploying is done by a separate team
