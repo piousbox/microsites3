@@ -3,7 +3,9 @@
 # specifically no -e flag!
 set -x
 
-if ! (( ssh-add -L | grep mac_id_rsa_2 )) ; then
+if ssh-add -L | grep macpc ; then
+  echo ok # nothing
+else
   ssh-add ~/.ssh/mac_id_rsa_2
 fi
 
