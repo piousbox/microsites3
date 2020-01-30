@@ -3,8 +3,8 @@
 # specifically no -e flag!
 set -x
 
-if ! (( ssh-add -L | grep mac_id_rsa )) ; then
-  ssh-add ~/.ssh/mac_id_rsa
+if ! (( ssh-add -L | grep mac_id_rsa_2 )) ; then
+  ssh-add ~/.ssh/mac_id_rsa_2
 fi
 
 cd ~/projects/ruby/microsites3

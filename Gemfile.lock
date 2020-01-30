@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 0b5b8dda8f949353a8efb7b864a5ff8b96c0ab27
+  revision: 6178118b24129746bb56bd45a6abfeb227c377ec
   branch: master
   specs:
-    ish_manager (0.1.8.182)
+    ish_manager (0.1.8.188)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: b44efafe3ce61ff1f31325bfb284fe138bd7e3f4
+  revision: 73e87e73c715ff88668d731c06edb7c50cca7b1f
   branch: master
   specs:
     ish_models (0.0.33.100)
@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 4fb6607041304be1151e4bd8d597e7bc845741fd
+  revision: 3012c140f590a259f7da69f2364307723947f3bd
   branch: master
   specs:
-    ishapi (0.1.8.112)
+    ishapi (0.1.8.113)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
@@ -525,8 +525,8 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   paperclip (~> 5.3.0)
-  puma (~> 3.7)
-  rack-cors
+  puma (~> 3.12)
+  rack-cors (~> 1.0)
   rails (~> 5.1.0)
   rails-controller-testing
   rspec

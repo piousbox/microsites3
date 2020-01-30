@@ -88,6 +88,7 @@ Rails.application.configure do
 
 end
 
+=begin
 Rails.application.config.middleware.use ExceptionNotification::Rack,
   email: {
     deliver_with: :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
@@ -95,4 +96,5 @@ Rails.application.config.middleware.use ExceptionNotification::Rack,
     sender_address: %{"m3 exceptionist" <autobot@wasya.co>},
     exception_recipients: %w{piousbox@gmail.com}
   }
+=end
   
