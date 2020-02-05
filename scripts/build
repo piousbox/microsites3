@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -x
+
+branch=`git branch | grep -e "^*" | cut -d' ' -f 2`
+
+git checkout master
+git merge "$branch"
+## no need to precompile assets... the API has no views
+# RAILS_ENV=production bundle exec rake assets:precompile
+git add .
+git commit -m "autobuild `date "+%Y%m%d"`"
+git push origin master
+git checkout "$branch"
+git merge master
+git push
+
+echo ok

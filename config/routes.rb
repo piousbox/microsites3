@@ -1,25 +1,18 @@
 Rails.application.routes.draw do
-
-  # root :to => 'api/api#home'
-
-  mount Ishapi::Engine, :at => 'api'
-
-=begin
-  namespace :api do
-    root :to => 'api#home'
-
-    get 'cities/:cityname', :to => 'cities#show', :defaults => { :format => :json }
-    resources :cities
-
-    get 'reports',                :to => 'reports#index'
-    get 'reports/view/:name_seo', :to => 'reports#show'
-
-    get 'sites/by-id/:site_id',    :to => 'sites#show', :defaults => { :format => :json }
-    get 'sites/show/:domain',      :to => 'sites#show', :constraints => { :domain => /[^\/]+/ }
-  end
-=end
-
+  devise_for :users
+  root :to => 'application#home'
+  mount Ishapi::Engine, :at => '/api/'
+  mount IshManager::Engine, :at => '/manager/'
 end
+
+
+
+
+
+
+
+
+
 
 =begin
   scope "/:locale", :constraints => { :locale => /en|ru|pt/ } do
