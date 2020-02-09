@@ -21,7 +21,7 @@ namespace :deploy do
     on roles(:web) do
       execute "cd #{fetch(:deploy_to)}/current && " +
         "sudo /home/#{fetch(:app_user)}/.rbenv/versions/#{fetch(:ruby_version)}/bin/bundle --path /home/#{fetch(:app_user)}/projects/#{fetch(:application)}/vendor/bundle && " +
-        "sudo chown ubuntu -R /home/ubuntu/projects/microsites3a/releases/"
+        "sudo chown #{fetch(:app_user)} -R /home/ubuntu/projects/microsites3a/releases/"
     end
   end
 
