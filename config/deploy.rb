@@ -31,9 +31,17 @@ namespace :deploy do
       execute "sudo pkill nginx; sleep 1; sudo nginx"
     end
   end
+
+  task :restart_stockwatcher do
+    on roles(:web) do
+      execute "sudo systemctl restart stockwatcher.service"
+    end
+  end
+
 end
 
 after "deploy:published", "restart_nginx" # to clear memory for bundler
 after "deploy:published", "bundle"
 after "deploy:published", "restart_nginx"
+after "deploy:published", "restart_stockwatcher"
 
