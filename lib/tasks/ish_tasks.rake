@@ -50,5 +50,9 @@ namespace :ish do
   task :iron_practice => :environment do
     ::Ish::IronCondorWatcher.new.new_order
   end
+  desc 'watch condors once'
+  task :watch_condors_once => :environment do
+    ::Ish::IronCondorWatcher.new.watch_once
+  end
 
 end

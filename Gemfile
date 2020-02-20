@@ -8,6 +8,7 @@ end
 gem 'bundler', '~> 2.0.0'
 gem 'ahoy_matey'
 gem 'exception_notification'
+gem 'business_time'
 
 gem 'newrelic_rpm'
 gem 'rails', '~> 5.1.0'
