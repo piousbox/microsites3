@@ -1,10 +1,5 @@
 include ERB::Util
 
-def puts! a, b=''
-  puts "+++ +++ #{b}"
-  puts a.inspect
-end
-
 class Yelp
 
   TAG_DENTISTS = 'yelp_dentists'

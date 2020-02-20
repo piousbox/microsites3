@@ -28,3 +28,14 @@ module Microsites3Api
 
   end
 end
+
+def puts! a, b=''
+  puts "+++ +++ #{b}"
+  puts a.inspect
+end
+
+def print! a, b=''
+  puts "+++ #{b}"
+  print a
+  STDOUT.flush
+end

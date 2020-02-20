@@ -1,10 +1,11 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 8a2a5eaa8f6d16536b920e069d8deae4457cc315
+  revision: 8869c6facb5ae963a2180091996de702d5ffa7dc
   branch: master
   specs:
     ish_manager (0.1.8.201)
       activeadmin (~> 1.0)
+      business_time (~> 0.9)
       cancancan (~> 2.0)
       devise (~> 4.3)
       haml (~> 5.0)
@@ -132,6 +133,9 @@ GEM
     browser (2.5.3)
     bson (4.7.1)
     builder (3.2.3)
+    business_time (0.9.3)
+      activesupport (>= 3.2.0)
+      tzinfo
     byebug (11.0.1)
     cancancan (2.3.0)
     capistrano (3.8.1)

@@ -1,10 +1,4 @@
-
 require 'yelp'
-
-def puts! a, b=''
-  puts "+++ +++ #{b}"
-  puts a.inspect
-end
 
 namespace :yelp_crawl do
 

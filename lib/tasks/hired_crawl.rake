@@ -1,9 +1,4 @@
 
-def puts! a, b=''
-  puts "+++ +++ #{b}"
-  puts a.inspect
-end
-
 def process_page page, args={}
   profile   = args[:profile] || IshModels::UserProfile.find_by( :email => 'piousbox@gmail.com' )
   tag       = args[:tag] || :unknown_scraped_tag

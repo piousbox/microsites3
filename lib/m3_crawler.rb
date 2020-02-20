@@ -1,9 +1,4 @@
 
-def puts! a, b=''
-  puts "+++ +++ #{b}"
-  puts a.inspect
-end
-
 class M3Crawler
 
   def self.crawl_20180724

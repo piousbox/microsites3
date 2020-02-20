@@ -1,11 +1,6 @@
 require 'nokogiri'
 require 'csv'
 
-def puts! a, b=''
-  puts "+++ +++ #{b}"
-  puts a.inspect
-end
-
 namespace :ish do
 
   desc "migrate"
@@ -26,14 +21,6 @@ namespace :ish do
         csv << [ r.name, r.subhead, r.descr, r.created_at ]
       end
     end
-  end
-
-  # 20180615
-  desc 'trash wdz reports'
-  task :trash_wdz_reports => :environment do
-    reports = Site.where( :domain => 'webdevzine.com', :lang => :en ).first.reports
-    puts! reports.length, 'length'
-    puts! reports.map { |r| r.update_attributes( :is_trash => true ) }, 'trashed?'
   end
 
   desc 'export domain/lang reports; run with no params for usage'
@@ -57,6 +44,11 @@ namespace :ish do
         end
       end
     end
+  end
+
+  desc 'iron practice'
+  task :iron_practice => :environment do
+    ::Ish::IronCondorWatcher.new.new_order
   end
 
 end
