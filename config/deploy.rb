@@ -5,7 +5,7 @@ set :ruby_version, "2.5.0"
 set :repo_url, "git@github.com:piousbox/microsites3.git"
 set :deploy_to, "/home/ubuntu/projects/microsites3a"
 
-append :linked_files, "config/initializers/00_s3.rb", "config/mongoid.yml", "config/initializers/koala.rb", "config/initializers/05_stripe.rb"
+append :linked_files, "config/initializers/00_s3.rb", "config/mongoid.yml", "config/initializers/koala.rb", "config/initializers/05_stripe.rb", "config/initializers/06_ally.rb"
 
 set :deploy_via, :remote_cache
 
