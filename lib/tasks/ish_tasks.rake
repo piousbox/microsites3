@@ -46,6 +46,9 @@ namespace :ish do
     end
   end
 
+  ##
+  ## 202002
+  ##
   desc 'iron practice'
   task :iron_practice => :environment do
     ::Ish::IronCondorWatcher.new.new_order
@@ -55,4 +58,14 @@ namespace :ish do
     ::Ish::IronCondorWatcher.new.watch_once
   end
 
+  desc 'watch covered calls'
+  task :watch_covered_calls => :environment do
+    ::Ish::CoveredCallWatcher.new.watch_once
+  end
+
+  desc 'Ally status update'
+  task :ally_status_update => :environment do
+    ::Ish::IronCondorWatcher.new.ally_status_update
+  end
+  
 end
