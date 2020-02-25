@@ -29,8 +29,14 @@ module Microsites3Api
   end
 end
 
+def json_puts! a, b=''
+  puts "+++ #{b}"
+  print JSON.pretty_generate( a )
+  STDOUT.flush
+end
+
 def puts! a, b=''
-  puts "+++ +++ #{b}"
+  puts "+++ #{b}"
   puts a.inspect
 end
 
