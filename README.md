@@ -24,7 +24,9 @@ Fork these repos:
 
 First, clone the main repo:
 ```
-  mkdir -p ~/projects/ruby ; cd ~/projects/ruby ; git clone git@github.com:$GIT_USERNAME/microsites3.git
+ mkdir -p ~/projects/ruby ; 
+ cd ~/projects/ruby ; 
+ git clone git@github.com:$GIT_USERNAME/microsites3.git
 ```
 
 Then, get access files from me.
