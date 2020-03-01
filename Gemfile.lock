@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 7c129820bf599a389ace5e2f67dd233f8457a3b0
+  revision: 6862d2f554272e2975e507bba9b30e7dfd6e3906
   branch: master
   specs:
-    ishapi (0.1.8.122)
+    ishapi (0.1.8.123)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
