@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 5ba7e10fa9d4b922a14f43764f6999af5f440592
+  revision: 6da62e7f0fae7b0c33253f40645c7d2c140245a4
   branch: master
   specs:
-    ish_manager (0.1.8.211)
+    ish_manager (0.1.8.213)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ish_models.git
-  revision: 555b89ae20db63e072f5463129c6cbf9465850fb
+  revision: 3bcadfc91f5324515f68946edc02f017cff92b3a
   branch: master
   specs:
-    ish_models (0.0.33.118)
+    ish_models (0.0.33.119)
       aws-sdk
       devise (> 0)
       kaminari-mongoid (~> 1.0.1)
@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: e9d08bf70a932afb3e3decdc6d1363b10d501514
+  revision: 892190da4478bd153bb84527cfd5ce80e5f13341
   branch: master
   specs:
-    ishapi (0.1.8.128)
+    ishapi (0.1.8.130)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
@@ -122,7 +122,7 @@ GEM
     aws-sigv4 (1.1.1)
       aws-eventstream (~> 1.0, >= 1.0.2)
     bcrypt (3.1.13)
-    bindata (2.4.6)
+    bindata (2.4.7)
     bindex (0.8.1)
     bson (4.8.2)
     builder (3.2.4)
@@ -328,12 +328,12 @@ GEM
     rack (2.2.2)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-oauth2 (1.10.1)
+    rack-oauth2 (1.11.0)
       activesupport
       attr_required
       httpclient
       json-jwt (>= 1.11.0)
-      rack
+      rack (>= 2.1.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rack-throttle (0.7.0)
