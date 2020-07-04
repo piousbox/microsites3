@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: 7f6321b055e8f483e277a5bff306ad89b8759d08
+  revision: ce0462bc2ac4ebc9d191c5f37675de2c612f1786
   branch: master
   specs:
-    ish_manager (0.1.8.222)
+    ish_manager (0.1.8.223)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 892190da4478bd153bb84527cfd5ce80e5f13341
+  revision: e7367af90882841f57dc2640a1722b153dd39361
   branch: master
   specs:
-    ishapi (0.1.8.130)
+    ishapi (0.1.8.132)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
@@ -229,7 +229,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.3.0)
-    json-jwt (1.11.0)
+    json-jwt (1.13.0)
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
@@ -328,7 +328,7 @@ GEM
     rack (2.2.2)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-oauth2 (1.11.0)
+    rack-oauth2 (1.14.0)
       activesupport
       attr_required
       httpclient
