@@ -20,7 +20,7 @@ RAILS_ENV=production bundle exec rake assets:precompile &&
 git checkout master &&
 git merge "$branch" &&
 git add . &&
-git commit -m "autobuild `date "+%Y%m%d"`" 
+git commit -m "autobuild `date "+%Y%m%d"`"
 git push origin master &&
 git checkout "$branch" &&
 git merge master &&
