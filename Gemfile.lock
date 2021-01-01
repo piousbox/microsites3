@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/piousbox/ish_manager.git
-  revision: fae1adb31b96ebf52287a9cf6bda34925a196d67
+  revision: a8c51ad06bb948315d6bc92a493131a784939244
   branch: master
   specs:
-    ish_manager (0.1.8.228)
+    ish_manager (0.1.8.229)
       activeadmin (~> 1.0)
       cancancan (~> 2.0)
       devise (~> 4.3)
@@ -28,10 +28,10 @@ GIT
 
 GIT
   remote: https://github.com/piousbox/ishapi.git
-  revision: 6f6ae0d0ea2830fe62f852fa9fd0a6039296af11
+  revision: e53c557a579b436c4666edc982ea818dbe041aa5
   branch: master
   specs:
-    ishapi (0.1.8.136)
+    ishapi (0.1.8.137)
       cancancan (~> 2.0)
       fb_graph
       googleauth (~> 0.8.0)
