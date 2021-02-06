@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => 'application#home' 
+  root :to => 'application#home'
   get 'users/sign_up', :to => 'application#home'
 
   put 'v5', :to => 'application#test'
@@ -8,16 +8,16 @@ Rails.application.routes.draw do
 
   devise_for :users, :skip => [ :registrations ], :controllers => {
                :sessions  => 'users/sessions',  :confirmations => 'users/confirmations',
-               :passwords => 'users/passwords', :unlocks       => 'users/unlocks' 
+               :passwords => 'users/passwords', :unlocks       => 'users/unlocks'
              }
   mount Ishapi::Engine, :at => '/api/'
   mount IshManager::Engine, :at => '/manager/'
-  
+
   get 'sitemap',                   :to => 'sitemaps#show'
   get 'sites/:domainname/sitemap', :to => 'sitemaps#show', :constraints => { :domainname => /.*/, :format => /xml/ }
 
   get '/auth/google_oauth2/callback', to: 'application#auth_callback'
-  
+
 end
 
 
@@ -35,20 +35,20 @@ end
     get 'about', :to => 'welcome#about', :as => :about
     get 'privacy', :to => 'welcome#privacy', :as => :privacy
     get 'contact', :to => 'welcome#contact', :as => :contact
-    
+
     devise_for :users, :controllers => {
       :sessions => "users/sessions",
       :registrations => 'users/registrations'
     }
 
-    
+
     # cities
     get 'cities/travel-to/:cityname' => redirect { |params, request| "http://travel-guide.mobi/en/cities/travel-to/#{params[:cityname]}" }
     get 'cities' => redirect { |params, request| 'http://travel-guide.mobi/en/cities' }
     get 'cities/*bbb' => redirect { |params, request| "http://travel-guide.mobi/#{params[:locale]}/cities/#{params[:bbb]}" }
     get 'venues/in-city/:cityname' => redirect { |params, request| "http://travel-guide.mobi/en/cities/travel-to/#{params[:cityname]}" }
 
-    
+
     get 'galleries', :to => 'galleries#index', :as => :galleries
     get 'galleries/page/:galleries_page', :to => 'galleries#index' # @deprecated, keep it for Google
     get 'galleries/new', :to => 'galleries#new', :as => :new_gallery
@@ -69,7 +69,7 @@ end
     post 'galleries/set_show_style/:style', :to => 'galleries#set_show_style'
     resources :galleries
 
-    
+
     # get 'photos/upload', :to => 'photos#upload', :as => :new_photo
     # post 'churn-photos', :to => 'photos#churn_photos', :as => :churn_photos
     match 'photos/driver-for/:gallery_id' => 'photos#driver', :as => :add_photos, :via => [ :get, :post, :put ]
@@ -78,7 +78,7 @@ end
     get 'photos/new-for-gallery/:gallery_id', :to => 'photos#new', :as => :new_photo_for_gallery
     resources :photos
 
-    
+
     get 'reports', :to => 'reports#index', :as => :reports
     get 'reports/page/:reports_page', :to => 'reports#index' # @deprecated, but keep it for Google
     get 'reports/view/:name_seo', :to => 'reports#show', :as => :report
@@ -87,9 +87,9 @@ end
     delete 'reports/:id', :to => 'reports#destroy', :as => :delete_report
     resources :reports
 
-    
+
     get "sites/:domainname.html/newsitems/page/:newsitems_page" => redirect { |params, request|
-      "/#{params[:locale]}/sites/#{params[:domainname]}/newsitems/page/#{params[:newsitems_page]}" 
+      "/#{params[:locale]}/sites/#{params[:domainname]}/newsitems/page/#{params[:newsitems_page]}"
     }, :constraints => { :domainname => /.*/, :format => /xml|html|json/ }
     get "sites/:domainname.html", :to => "sites#show", :as => :site,   :constraints => { :domainname => /.*/, :format => /xml|html|json/ }
     get 'sites/:domainname/tags', :to => 'tags#index', :as => :tags,   :constraints => { :domainname => /.*/, :format => /xml|html|json/ }
@@ -113,7 +113,7 @@ end
     get 'tags/:tagname' => redirect { |params, request| "/#{params[:locale]}/tags/view/#{params[:tagname]}" }
     get 'tags/view/:tagname', :to => 'tags#show', :as => :tag
 
-    
+
     get '/users', :to => 'users#index', :as => :users
     get '/users/page/:users_page', :to => 'users#index'
     get '/users/show/:username', :to => 'users#show', :as => :user
@@ -148,7 +148,7 @@ end
     # resources :user_profile
     # messages are not a full resource yet.
 
-    
+
     get 'videos', :to => 'videos#index', :as => :videos
     get 'videos/page/:videos_page', :to => 'videos#index'
     get 'videos/show/:youtube_id', :to => 'videos#show', :as => :video
