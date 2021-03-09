@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+.devise-sessions-new {
+  input[type='email'],
+  input[type='password'],
+  input[type='submit'] {
+    width: 100%;
+    font-size: 2em;
+  }
+  input[type='checkbox'] {
+    padding: 1em;
+    transform: scale(2);
+  }
+  label {
+    font-size: 2em;
+  }
+
+  .remember-me {
+    margin: 2em 0 2em 1em;
+
+    label {
+      font-size: inherit;
+      margin-left: 1em;
+    }
+  }
+}
+
+.devise-shared--links {
+  margin-top: 2em;
+  float: right;
+}

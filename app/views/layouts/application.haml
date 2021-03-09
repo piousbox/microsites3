@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title Microsites3
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %meta{charset: "UTF-8"}
+    %meta{description: "some description"}
+    %meta{content: "article", property: "og:type"}
+    %meta{content: "some title tome", property: "og:title"}
+    %meta{content: "some description tome", property: "og:description"}
+  %body
+    .container
+      .row
+        .col-sm-12
+          %p.notice= notice
+          %p.alert= alert
+          = yield
+          -# = render :partial => 'application/main_footer'
